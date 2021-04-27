@@ -1,0 +1,71 @@
+﻿@using TemplateSystem.Data.Models;
+@model IEnumerable<StarDesc>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{ 
+    ViewBag.Title = "Star System";
+        }
+<h2>Star List</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table border="1">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StarName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StarSize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StarDistanceFromSun)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StarGalaxyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StarBrightness)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpectralType)
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StarName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StarSize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StarDistanceFromSun)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StarGalaxyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StarBrightness)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpectralType)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+
+
+    }
+</table>
