@@ -1,0 +1,69 @@
+﻿@using TemplateSystem.Data.Models;
+@model StarDesc
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    </style>
+<h2>Details</h2>
+
+<div>
+    <h4>Star Description</h4>
+    <hr />
+    <dl class="dl-horizontal" border="1">
+        <dt>
+            @Html.DisplayNameFor(model => model.StarName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StarName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StarSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StarSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StarDistanceFromSun)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StarDistanceFromSun)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StarGalaxyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StarGalaxyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StarBrightness)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StarBrightness)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpectralType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpectralType)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

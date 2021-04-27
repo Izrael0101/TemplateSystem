@@ -1,0 +1,3 @@
+C:\Users\Israel\Downloads\Arquitecturas\TemplateSystem\TemplateSystem.Web\obj\UAT\TemplateSystem.Web.csprojAssemblyReference.cache
+C:\Users\Israel\Downloads\Arquitecturas\TemplateSystem\TemplateSystem.Web\obj\UAT\TemplateSystem.Web.csproj.CoreCompileInputs.cache
+C:\Users\Israel\Downloads\Arquitecturas\TemplateSystem\TemplateSystem.Web\obj\UAT\CG.StarSystem.Web.dll
