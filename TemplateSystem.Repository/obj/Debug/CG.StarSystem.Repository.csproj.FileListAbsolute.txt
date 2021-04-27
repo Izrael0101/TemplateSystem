@@ -1,0 +1,17 @@
+C:\Users\Israel\Downloads\Arquitecturas\asp.net-mvc-sol-arch-master\CG.StarSystem\CG.StarSystem.Repository\bin\Debug\CG.StarSystem.Repository.dll.config
+C:\Users\Israel\Downloads\Arquitecturas\asp.net-mvc-sol-arch-master\CG.StarSystem\CG.StarSystem.Repository\bin\Debug\CG.StarSystem.Repository.dll
+C:\Users\Israel\Downloads\Arquitecturas\asp.net-mvc-sol-arch-master\CG.StarSystem\CG.StarSystem.Repository\bin\Debug\CG.StarSystem.Repository.pdb
+C:\Users\Israel\Downloads\Arquitecturas\asp.net-mvc-sol-arch-master\CG.StarSystem\CG.StarSystem.Repository\bin\Debug\CG.StarSystem.Data.dll
+C:\Users\Israel\Downloads\Arquitecturas\asp.net-mvc-sol-arch-master\CG.StarSystem\CG.StarSystem.Repository\bin\Debug\CG.StarSystem.Entity.dll
+C:\Users\Israel\Downloads\Arquitecturas\asp.net-mvc-sol-arch-master\CG.StarSystem\CG.StarSystem.Repository\bin\Debug\EntityFramework.dll
+C:\Users\Israel\Downloads\Arquitecturas\asp.net-mvc-sol-arch-master\CG.StarSystem\CG.StarSystem.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Israel\Downloads\Arquitecturas\asp.net-mvc-sol-arch-master\CG.StarSystem\CG.StarSystem.Repository\bin\Debug\CG.StarSystem.Data.pdb
+C:\Users\Israel\Downloads\Arquitecturas\asp.net-mvc-sol-arch-master\CG.StarSystem\CG.StarSystem.Repository\bin\Debug\CG.StarSystem.Data.dll.config
+C:\Users\Israel\Downloads\Arquitecturas\asp.net-mvc-sol-arch-master\CG.StarSystem\CG.StarSystem.Repository\bin\Debug\CG.StarSystem.Entity.pdb
+C:\Users\Israel\Downloads\Arquitecturas\asp.net-mvc-sol-arch-master\CG.StarSystem\CG.StarSystem.Repository\bin\Debug\EntityFramework.xml
+C:\Users\Israel\Downloads\Arquitecturas\asp.net-mvc-sol-arch-master\CG.StarSystem\CG.StarSystem.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Israel\Downloads\Arquitecturas\asp.net-mvc-sol-arch-master\CG.StarSystem\CG.StarSystem.Repository\obj\Debug\CG.StarSystem.Repository.csprojAssemblyReference.cache
+C:\Users\Israel\Downloads\Arquitecturas\asp.net-mvc-sol-arch-master\CG.StarSystem\CG.StarSystem.Repository\obj\Debug\CG.StarSystem.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Israel\Downloads\Arquitecturas\asp.net-mvc-sol-arch-master\CG.StarSystem\CG.StarSystem.Repository\obj\Debug\CG.StarSystem.Repository.csproj.CopyComplete
+C:\Users\Israel\Downloads\Arquitecturas\asp.net-mvc-sol-arch-master\CG.StarSystem\CG.StarSystem.Repository\obj\Debug\CG.StarSystem.Repository.dll
+C:\Users\Israel\Downloads\Arquitecturas\asp.net-mvc-sol-arch-master\CG.StarSystem\CG.StarSystem.Repository\obj\Debug\CG.StarSystem.Repository.pdb

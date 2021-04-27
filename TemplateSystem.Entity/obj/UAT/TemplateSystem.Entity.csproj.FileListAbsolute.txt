@@ -1,0 +1,7 @@
+C:\Users\Israel\Downloads\Arquitecturas\Asp-mvc-arch-master\TemplateSystem\TemplateSystem.Entity\bin\UAT\CG.StarSystem.Entity.dll
+C:\Users\Israel\Downloads\Arquitecturas\Asp-mvc-arch-master\TemplateSystem\TemplateSystem.Entity\obj\UAT\TemplateSystem.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Israel\Downloads\Arquitecturas\Asp-mvc-arch-master\TemplateSystem\TemplateSystem.Entity\obj\UAT\CG.StarSystem.Entity.dll
+C:\Users\Israel\Downloads\Arquitecturas\TemplateSystem\TemplateSystem.Entity\bin\UAT\CG.StarSystem.Entity.dll
+C:\Users\Israel\Downloads\Arquitecturas\TemplateSystem\TemplateSystem.Entity\obj\UAT\TemplateSystem.Entity.csprojAssemblyReference.cache
+C:\Users\Israel\Downloads\Arquitecturas\TemplateSystem\TemplateSystem.Entity\obj\UAT\TemplateSystem.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Israel\Downloads\Arquitecturas\TemplateSystem\TemplateSystem.Entity\obj\UAT\CG.StarSystem.Entity.dll
