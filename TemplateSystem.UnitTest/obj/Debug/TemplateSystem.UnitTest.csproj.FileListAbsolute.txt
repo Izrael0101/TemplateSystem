@@ -21,7 +21,6 @@ C:\01_DESARROLLO\GIT\TemplateSystem\TemplateSystem.UnitTest\bin\Debug\Microsoft.
 C:\01_DESARROLLO\GIT\TemplateSystem\TemplateSystem.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
 C:\01_DESARROLLO\GIT\TemplateSystem\TemplateSystem.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 C:\01_DESARROLLO\GIT\TemplateSystem\TemplateSystem.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
-C:\01_DESARROLLO\GIT\TemplateSystem\TemplateSystem.UnitTest\obj\Debug\TemplateSystem.UnitTest.csprojAssemblyReference.cache
 C:\01_DESARROLLO\GIT\TemplateSystem\TemplateSystem.UnitTest\obj\Debug\TemplateSystem.UnitTest.csproj.CoreCompileInputs.cache
 C:\01_DESARROLLO\GIT\TemplateSystem\TemplateSystem.UnitTest\obj\Debug\TemplateSystem.UnitTest.csproj.CopyComplete
 C:\01_DESARROLLO\GIT\TemplateSystem\TemplateSystem.UnitTest\obj\Debug\UnitTest.dll
