@@ -1,6 +1,0 @@
-C:\Users\Israel\Downloads\Arquitecturas\asp.net-mvc-sol-arch-master\CG.StarSystem\CG.StarSystem.Entity\bin\Debug\CG.StarSystem.Entity.dll
-C:\Users\Israel\Downloads\Arquitecturas\asp.net-mvc-sol-arch-master\CG.StarSystem\CG.StarSystem.Entity\bin\Debug\CG.StarSystem.Entity.pdb
-C:\Users\Israel\Downloads\Arquitecturas\asp.net-mvc-sol-arch-master\CG.StarSystem\CG.StarSystem.Entity\obj\Debug\CG.StarSystem.Entity.csprojAssemblyReference.cache
-C:\Users\Israel\Downloads\Arquitecturas\asp.net-mvc-sol-arch-master\CG.StarSystem\CG.StarSystem.Entity\obj\Debug\CG.StarSystem.Entity.csproj.CoreCompileInputs.cache
-C:\Users\Israel\Downloads\Arquitecturas\asp.net-mvc-sol-arch-master\CG.StarSystem\CG.StarSystem.Entity\obj\Debug\CG.StarSystem.Entity.dll
-C:\Users\Israel\Downloads\Arquitecturas\asp.net-mvc-sol-arch-master\CG.StarSystem\CG.StarSystem.Entity\obj\Debug\CG.StarSystem.Entity.pdb

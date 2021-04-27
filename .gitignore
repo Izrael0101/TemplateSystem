@@ -9,9 +9,15 @@
 *.user
 *.userosscache
 *.sln.docstates
+_ReSharper.*
+bin
+obj
+packages
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
+*.bin
+*.obj
 
 # Mono auto generated files
 mono_crash.*
@@ -30,6 +36,16 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+TemplateSystem.WebApi/[Bb]in/
+TemplateSystem.WebApi/[Oo]bj/
+TemplateSystem.Web/[Bb]in/
+TemplateSystem.Web/[Oo]bj/
+TemplateSystem.Entity/[Bb]in/
+TemplateSystem.Entity/[Oo]bj/
+TemplateSystem.Repository/[Bb]in/
+TemplateSystem.Repository/[Oo]bj/
+TemplateSystem.Services/[Bb]in/
+TemplateSystem.Services/[Oo]bj/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -352,3 +368,36 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+TemplateSystem.WebApi/obj/*.*
+
+TemplateSystem.Web/obj/*.*
+
+TemplateSystem.UnitTest/obj/*.*
+
+TemplateSystem.Services/obj/*.*
+
+TemplateSystem.Repository/obj/*.*
+
+TemplateSystem.Entity/obj/*.*
+
+TemplateSystem.Data/obj/*.*
+
+
+TemplateSystem.WebApi/bin/*.*
+
+TemplateSystem.Web/bin/*.*
+
+TemplateSystem.UnitTest/bin/*.*
+
+TemplateSystem.Services/bin/*.*
+
+TemplateSystem.Repository/bin/*.*
+
+TemplateSystem.Entity/bin/*.*
+
+TemplateSystem.Data/bin/*.*
+
+
+
+
