@@ -14,3 +14,9 @@ C:\Users\Israel\Downloads\Arquitecturas\TemplateSystem\TemplateSystem.Entity\obj
 C:\Users\Israel\Downloads\Arquitecturas\TemplateSystem\TemplateSystem.Entity\obj\Debug\TemplateSystem.Entity.csproj.CoreCompileInputs.cache
 C:\Users\Israel\Downloads\Arquitecturas\TemplateSystem\TemplateSystem.Entity\obj\Debug\TemplateSystem.Entity.dll
 C:\Users\Israel\Downloads\Arquitecturas\TemplateSystem\TemplateSystem.Entity\obj\Debug\TemplateSystem.Entity.pdb
+C:\01_DESARROLLO\GIT\TemplateSystem\TemplateSystem.Entity\bin\Debug\TemplateSystem.Entity.dll
+C:\01_DESARROLLO\GIT\TemplateSystem\TemplateSystem.Entity\bin\Debug\TemplateSystem.Entity.pdb
+C:\01_DESARROLLO\GIT\TemplateSystem\TemplateSystem.Entity\obj\Debug\TemplateSystem.Entity.csprojAssemblyReference.cache
+C:\01_DESARROLLO\GIT\TemplateSystem\TemplateSystem.Entity\obj\Debug\TemplateSystem.Entity.csproj.CoreCompileInputs.cache
+C:\01_DESARROLLO\GIT\TemplateSystem\TemplateSystem.Entity\obj\Debug\TemplateSystem.Entity.dll
+C:\01_DESARROLLO\GIT\TemplateSystem\TemplateSystem.Entity\obj\Debug\TemplateSystem.Entity.pdb
