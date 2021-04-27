@@ -12,6 +12,8 @@
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
+*.bin
+*.obj
 
 # Mono auto generated files
 mono_crash.*
@@ -30,6 +32,16 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+TemplateSystem.WebApi/[Bb]in/
+TemplateSystem.WebApi/[Oo]bj/
+TemplateSystem.Web/[Bb]in/
+TemplateSystem.Web/[Oo]bj/
+TemplateSystem.Entity/[Bb]in/
+TemplateSystem.Entity/[Oo]bj/
+TemplateSystem.Repository/[Bb]in/
+TemplateSystem.Repository/[Oo]bj/
+TemplateSystem.Services/[Bb]in/
+TemplateSystem.Services/[Oo]bj/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
