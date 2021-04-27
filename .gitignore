@@ -539,3 +539,17 @@ TemplateSystem.Data/bin/Debug/TemplateSystem.Data.dll.config
 TemplateSystem.Data/bin/Debug/TemplateSystem.Data.dll
 TemplateSystem.Data/bin/Debug/TemplateSystem.Data.dll
 TemplateSystem.Data/bin/Debug/TemplateSystem.Data.pdb
+TemplateSystem.Data/bin/Debug/TemplateSystem.Data.dll
+TemplateSystem.Data/bin/Debug/TemplateSystem.Data.pdb
+TemplateSystem.Data/bin/Debug/TemplateSystem.Entity.dll
+TemplateSystem.Data/bin/Debug/TemplateSystem.Entity.pdb
+TemplateSystem.Data/obj/Debug/TemplateSystem.Data.csprojAssemblyReference.cache
+TemplateSystem.Data/obj/Debug/TemplateSystem.Data.dll
+TemplateSystem.Data/obj/Debug/TemplateSystem.Data.pdb
+TemplateSystem.Entity/bin/Debug/TemplateSystem.Entity.dll
+TemplateSystem.Entity/bin/Debug/TemplateSystem.Entity.pdb
+TemplateSystem.Entity/obj/Debug/TemplateSystem.Entity.csproj.FileListAbsolute.txt
+TemplateSystem.Entity/obj/Debug/TemplateSystem.Entity.dll
+TemplateSystem.Entity/obj/Debug/TemplateSystem.Entity.pdb
+TemplateSystem.IntegrationTest/bin/Debug/TemplateSystem.IntegrationTest.dll
+TemplateSystem.IntegrationTest/bin/Debug/TemplateSystem.IntegrationTest.pdb
