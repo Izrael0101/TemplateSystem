@@ -1,6 +1,6 @@
 namespace TemplateSystem.Entity.Models
 {
-    public partial class StarDesc
+    public partial class Student
     {
         public int Id { get; set; }
         public string StarName { get; set; }

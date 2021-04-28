@@ -5,42 +5,42 @@ using System.Data.Entity;
 using TemplateSystem.Entity.Models;
 using TemplateSystem.Data.Models;
 
-namespace TemplateSystem.Repository.StarDescs
+namespace TemplateSystem.Repository
 {
-    public class StarDescRepository : IStarDescRepository, IDisposable
+    public class StudentRepository : IStudentRepository, IDisposable
     {
 
-        private StarSystemContext _context;
+        private TemplateSystemDBContext _context;
 
         /// <summary>
-        ///     Create a new instance of <see cref="StarDescRepository" />.
+        ///     Create a new instance of <see cref="StudentRepository" />.
         /// </summary>
         /// <param name="transaction">Active transaction</param>
         /// <exception cref="ArgumentNullException">transaction</exception>
-        public StarDescRepository()
+        public StudentRepository()
         {
-            _context = new StarSystemContext();
+            _context = new TemplateSystemDBContext();
 
         }
 
         
-        public async Task<List<StarDesc>> GetStarDescsAsync()
+        public async Task<List<Student>> GetStudentAsync()
         {
-            return await _context.StarDescs.ToListAsync();
+            return await _context.Student.ToListAsync();
         }
 
-        public async Task<StarDesc> GetStarDescByIdAsync(int? id)
+        public async Task<Student> GetStudentByIdAsync(int? id)
         {
-            return await _context.StarDescs.FindAsync(id);
+            return await _context.Student.FindAsync(id);
         }
 
-        public  async Task CreateStarAsync(StarDesc stardesc)
+        public  async Task CreateStarAsync(Student stardesc)
         {
-             _context.StarDescs.Add(stardesc);
+             _context.Student.Add(stardesc);
             await _context.SaveChangesAsync(); 
         }
 
-        public async Task EditStarDescAsync(StarDesc stardesc)
+        public async Task EditStudentAsync(Student stardesc)
         {
             _context.Entry(stardesc).State = EntityState.Modified;
             await _context.SaveChangesAsync();
@@ -48,8 +48,8 @@ namespace TemplateSystem.Repository.StarDescs
 
         public async Task DeleteStarAsync(int? id)
         {
-            StarDesc stardesc = await _context.StarDescs.FindAsync(id);
-            _context.StarDescs.Remove(stardesc);
+            Student stardesc = await _context.Student.FindAsync(id);
+            _context.Student.Remove(stardesc);
             await _context.SaveChangesAsync();
         }
            

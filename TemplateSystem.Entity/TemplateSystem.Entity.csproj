@@ -50,10 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\LoginModel.cs" />
-    <Compile Include="Models\SpectralClassesSubType.cs" />
-    <Compile Include="Models\StarDesc.cs" />
-    <Compile Include="Models\StarTypeByLuminosityClass.cs" />
-    <Compile Include="Models\StarTypeBySpectralClass.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

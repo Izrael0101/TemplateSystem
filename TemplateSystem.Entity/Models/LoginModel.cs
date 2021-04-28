@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TemplateSystem.Entity.Models
 {
-    public partial class LoginModel
+    public partial class Login
     {
         public string UserName { get; set; }
         public string Password { get; set; }

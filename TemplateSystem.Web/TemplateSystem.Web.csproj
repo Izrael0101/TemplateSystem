@@ -3590,11 +3590,11 @@
     <Content Include="Scripts\Error\Error.js" />
     <Content Include="Scripts\Home\Home.js" />
     <Content Include="Scripts\Shared\Layout.js" />
-    <Content Include="Scripts\StarDesc\StarDesc.js" />
+    <Content Include="Scripts\Student\Student.js" />
     <Content Include="Web.config" />
-    <Content Include="Views\StarDesc\Edit.cshtml" />
-    <Content Include="Views\StarDesc\Create.cshtml" />
-    <Content Include="Views\StarDesc\Delete.cshtml" />
+    <Content Include="Views\Student\Edit.cshtml" />
+    <Content Include="Views\Student\Create.cshtml" />
+    <Content Include="Views\Student\Delete.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -3613,7 +3613,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\StarDescController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -3623,8 +3623,8 @@
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\StarDesc\Index.cshtml" />
-    <Content Include="Views\StarDesc\Details.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\Student\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

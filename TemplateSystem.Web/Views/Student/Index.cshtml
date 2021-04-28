@@ -1,12 +1,7 @@
-﻿@using TemplateSystem.Data.Models;
-@model IEnumerable<StarDesc>
-@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿@using TemplateSystem.Entity.Models;
+@model IEnumerable<Student>
 
-@{ 
-    ViewBag.Title = "Star System";
-        }
+
 <h2>Star List</h2>
 <p>
     @Html.ActionLink("Create New", "Create")

@@ -401,6 +401,8 @@ TemplateSystem.Data/bin/*.*
 
 TemplateSystem.WebApi/APILog/*.*
 
+TemplateSystem.Html/*.*
+
 
 
 

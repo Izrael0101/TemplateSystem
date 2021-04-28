@@ -4,9 +4,9 @@ using TemplateSystem.Entity.Models;
 
 namespace TemplateSystem.Data.Mapping
 {
-    public class StarDescMap : EntityTypeConfiguration<StarDesc>
+    public class StudentMap : EntityTypeConfiguration<Student>
     {
-        public StarDescMap()
+        public StudentMap()
         {
             // Primary Key
             this.HasKey(t => t.Id);
@@ -34,7 +34,7 @@ namespace TemplateSystem.Data.Mapping
                 .HasMaxLength(50);
 
             // Table & Column Mappings
-            this.ToTable("StarDesc");
+            this.ToTable("Student");
             this.Property(t => t.Id).HasColumnName("Id");
             this.Property(t => t.StarName).HasColumnName("StarName");
             this.Property(t => t.StarSize).HasColumnName("StarSize");
