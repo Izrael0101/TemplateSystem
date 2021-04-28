@@ -152,7 +152,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Israel Ramirez Garza - [@your_twitter](https://twitter.com/your_username) - israel.ramirez@evertecinc.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Projects Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
 
 
