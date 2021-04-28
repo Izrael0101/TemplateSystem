@@ -2,13 +2,15 @@
 $(document).ready(function () {
 
 
-    $("#btnLogin").click(function (e) {
-        Log();
+    $("#btnLogin").click(function (e) {    
+            //$("#frmLogin").submit()
+            Log();         
     });
 
 
     $("#Password").keypress(function (e) {
-        if (e.which == 13) {
+        if (e.which == 13) {       
+            //$("#frmLogin").submit()
             Log();
         }
     });
@@ -40,7 +42,12 @@ function Log() {
         //Domain: domain,
     }
 
-    logInAccess(ocredential);
+    if ($("#Username").val() != "" && $("#Password").val() != "") {
+        logInAccess(ocredential);
+    }
+    else {
+        Alerta('Warning', 'Advertencia', "Es necesario llenar los campos solicitados")
+    }
 
     
 
@@ -65,15 +72,15 @@ function logInAccess(ocredential) {
 
             } else {
                 if (Result.ChagePass == '1') {
-                    Alerta('Info', 'AVISO', Result.Message)
+                    Alerta('Info', 'Aviso', Result.Message)
                 }
                 else {
-                    Alerta('Danger', 'ERROR', Result.Message)
+                    Alerta('Danger', 'Error', Result.Message)
                 }
             }
         },
         error: function () {
-            Alerta('Danger', 'ERROR', 'Error de ejecución.')
+            Alerta('Danger', 'Error', 'Error de ejecución.')
         }
     });
 }
@@ -81,43 +88,68 @@ function logInAccess(ocredential) {
 
 function Alerta(Type, Titulo, Cuerpo) {
     switch (Type) {
-        case "Primary":
-            $.gritter.add({
+        case "Primary":          
+            swal({
                 title: Titulo,
                 text: Cuerpo,
-                class_name: 'gritter-primary'
-            });
+                icon: "info",
+                showCancelButton: false,
+                closeOnConfirm: false,
+                buttons: {
+
+                }
+            });  
             break;
 
         case "Success":
-            $.gritter.add({
+            swal({
                 title: Titulo,
                 text: Cuerpo,
-                class_name: 'gritter-success'
-            });
+                icon: "success",
+                showCancelButton: false,
+                closeOnConfirm: false,
+                buttons: {
+                   
+                }
+            });            
             break;
 
         case "Info":
-            $.gritter.add({
+            swal({
                 title: Titulo,
                 text: Cuerpo,
-                class_name: 'gritter-info'
-            });
+                icon: "info",
+                showCancelButton: false,
+                closeOnConfirm: false,
+                buttons: {
+
+                }
+            }); 
             break;
 
         case "Danger":
-            $.gritter.add({
+            swal({
                 title: Titulo,
                 text: Cuerpo,
-                class_name: 'gritter-danger'
-            });
+                icon: "error",
+                showCancelButton: false,
+                closeOnConfirm: false,
+                buttons: {
+
+                }
+            }); 
             break;
 
         case "Warning":
-            $.gritter.add({
+            swal({
                 title: Titulo,
                 text: Cuerpo,
-                class_name: 'gritter-warning'
+                icon: "warning",
+                showCancelButton: false,
+                closeOnConfirm: false,
+                buttons: {
+
+                }
             });
             break;
     }

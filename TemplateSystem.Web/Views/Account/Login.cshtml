@@ -1,4 +1,4 @@
-﻿@model TemplateSystem.Entity.Models.LoginModel
+﻿@model TemplateSystem.Entity.Models.Login
 
 
 @{
@@ -87,7 +87,7 @@
                 <!-- end login-header -->
                 <!-- begin login-content -->
                 <div class="login-content">
-                    <form class="margin-bottom-0">
+                    <form id="frmLogin" class="margin-bottom-0">
                         <div class="form-group m-b-15">
                             <input type="text" id="Username" class="form-control form-control-lg" placeholder="Email Address" required />
                             @*@Html.TextBoxFor(u => u.UserName, new { @placeholder = "Introduce tu usuario", @type = "text", @id = "username", @class = "form-control input-lg", @name = "UserName" })*@
@@ -103,7 +103,7 @@
                             </label>
                         </div>
                         <div class="login-buttons">
-                            <button type="button" id="btnLogin" class="btn btn-success btn-block btn-lg">Sign me in</button>
+                            <button type="button" typeof="submit" id="btnLogin" class="btn btn-success btn-block btn-lg">Sign me in</button>
                         </div>
                         <div class="m-t-20 m-b-40 p-b-40 text-inverse">
                             Not a member yet? Click <a href="register_v3.html" class="text-success">here</a> to register.
@@ -137,6 +137,8 @@
     @Scripts.Render("~/assets/js/apps.min.js")
     @Scripts.Render("~/assets/plugins/gritter/js/jquery.gritter.js")
     @Scripts.Render("~/assets/js/demo/ui-modal-notification.demo.min.js")
+
+    @Scripts.Render("~/assets/plugins/bootstrap-sweetalert/sweetalert.min.js")
     <!-- ================== END BASE JS ================== -->
 
     <script>

@@ -23,8 +23,9 @@ namespace TemplateSystem.Web.Controllers
             logger.Fatal("Sample fatal error message");
 
 
-            LoginModel Mod = new LoginModel();
+            Login Mod = new Login();
             return View(Mod);
+
         }
 
        // [HttpPost]
