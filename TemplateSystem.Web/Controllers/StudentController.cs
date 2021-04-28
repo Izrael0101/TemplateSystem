@@ -1,24 +1,24 @@
-﻿using TemplateSystem.Entity.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using TemplateSystem.Entity.Models;
 using TemplateSystem.Services;
 
 namespace TemplateSystem.Web.Controllers
 {
-    public class StarDescController : Controller
+    public class StudentController : Controller
     {
-        private readonly IStarDescService _service;
-        public StarDescController(IStarDescService service)
+        private readonly IStudentService _service;
+        public StudentController(IStudentService service)
         {
             _service = service;
         }
 
-        // GET: StarDesc
+        // GET: Student
         public async Task<ActionResult> Index()
         {
-            IList<StarDesc> stars = await _service.GetAllStarsAsync();
+            IList<Student> stars = await _service.GetAllStarsAsync();
 
             return View(stars);
         }
@@ -28,7 +28,7 @@ namespace TemplateSystem.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            StarDesc star = await _service.GetStarDescriptionByIdAsync(id);
+            Student star = await _service.GetStudentriptionByIdAsync(id);
             if (star == null)
             {
                 return HttpNotFound();
@@ -44,7 +44,7 @@ namespace TemplateSystem.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "StarName,StarSize,StarDistanceFromSun,StarGalaxyName,StarBrightness,SpectralType")] StarDesc stardesc)
+        public async Task<ActionResult> Create([Bind(Include = "StarName,StarSize,StarDistanceFromSun,StarGalaxyName,StarBrightness,SpectralType")] Student stardesc)
         {
             if (ModelState.IsValid)
             {
@@ -63,7 +63,7 @@ namespace TemplateSystem.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            StarDesc stardesc = await _service.GetStarDescriptionByIdAsync(id);
+            Student stardesc = await _service.GetStudentriptionByIdAsync(id);
             if (stardesc == null)
             {
                 return HttpNotFound();
@@ -77,11 +77,11 @@ namespace TemplateSystem.Web.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,StarName,StarSize,StarDistanceFromSun,StarGalaxyName,StarBrightness,SpectralType")] StarDesc stardesc)
+        public async Task<ActionResult> Edit([Bind(Include = "Id,StarName,StarSize,StarDistanceFromSun,StarGalaxyName,StarBrightness,SpectralType")] Student stardesc)
         {
             if (ModelState.IsValid)
             {
-                await _service.EditStarDescAsync(stardesc);
+                await _service.EditStudentAsync(stardesc);
 
                 return RedirectToAction("Index");
             }
@@ -95,7 +95,7 @@ namespace TemplateSystem.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            StarDesc stardesc = await _service.GetStarDescriptionByIdAsync(id);
+            Student stardesc = await _service.GetStudentriptionByIdAsync(id);
             if (stardesc == null)
             {
                 return HttpNotFound();

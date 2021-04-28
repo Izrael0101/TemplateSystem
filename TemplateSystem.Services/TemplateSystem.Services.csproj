@@ -49,9 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IStarDescService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StarDescService.cs" />
+    <Compile Include="Student\IStudentService.cs" />
+    <Compile Include="Student\StudentService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TemplateSystem.Entity\TemplateSystem.Entity.csproj">

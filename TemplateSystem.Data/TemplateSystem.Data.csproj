@@ -118,11 +118,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mapping\SpectralClassesSubTypeMap.cs" />
     <Compile Include="Mapping\StarDescMap.cs" />
-    <Compile Include="Mapping\StarTypeByLuminosityClassMap.cs" />
-    <Compile Include="Mapping\StarTypeBySpectralClassMap.cs" />
-    <Compile Include="StarSystemContext.cs" />
+    <Compile Include="TemplateSystemDBContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
