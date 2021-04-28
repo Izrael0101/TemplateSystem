@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
+using TemplateSystem.WebApi.Filters;
 
 namespace TemplateSystem.WebApi
 {
@@ -10,6 +8,7 @@ namespace TemplateSystem.WebApi
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            config.Filters.Add(new AuthorizeAttribute());
 
             // Web API routes
             config.MapHttpAttributeRoutes();
@@ -19,6 +18,11 @@ namespace TemplateSystem.WebApi
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+
+            config.Filters.Add(new GlobalExceptionAttribute());
+            config.Filters.Add(new LoggingFilterAttribute());
+
         }
     }
 }
