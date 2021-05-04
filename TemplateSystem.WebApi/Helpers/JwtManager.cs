@@ -24,7 +24,9 @@ namespace TemplateSystem.WebApi.Helpers
             {
                 Subject = new ClaimsIdentity(new[]
                         {
-                            new Claim(ClaimTypes.Name, username)
+                            new Claim(ClaimTypes.Name, username),
+                            new Claim(ClaimTypes.Version, "1.0"),
+                            new Claim(ClaimTypes.Role, "Administration")
                         }),
 
                 Expires = now.AddMinutes(Convert.ToInt32(expireMinutes)),
