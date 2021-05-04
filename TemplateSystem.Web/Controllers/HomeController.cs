@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using NLog;
+using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
@@ -9,11 +10,23 @@ namespace TemplateSystem.Web.Controllers
 {
     public class HomeController : Controller
     {
-      
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+
         // GET: Home
         public ActionResult Index()
-        {            
-            return View();
+        {
+            try
+            {
+                logger.Trace("Accedio al Home/Index");
+                return View();
+            }
+            catch (System.Exception)
+            {
+                logger.Error("Ocurrio un error en el try de Home/Index");
+                throw;
+            }
+
+            
         }
     }
 }
