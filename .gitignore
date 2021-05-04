@@ -399,6 +399,7 @@ TemplateSystem.Entity/bin/*.*
 TemplateSystem.Data/bin/*.*
 
 
+TemplateSystem.Web/logs/*.*
 TemplateSystem.WebApi/APILog/*.*
 
 TemplateSystem.Html/*.*
