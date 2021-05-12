@@ -1,13 +1,74 @@
-2021-04-30 15:42:43.1741|TRACE|TemplateSystem.Web.Controllers.AccountController|Sample trace message
-2021-04-30 15:42:43.3731|DEBUG|TemplateSystem.Web.Controllers.AccountController|Sample debug message
-2021-04-30 15:42:43.3851|INFO|TemplateSystem.Web.Controllers.AccountController|Sample informational message
-2021-04-30 15:42:43.3851|WARN|TemplateSystem.Web.Controllers.AccountController|Sample warning message
-2021-04-30 15:42:43.3851|ERROR|TemplateSystem.Web.Controllers.AccountController|Sample error message
-2021-04-30 15:42:43.3851|FATAL|TemplateSystem.Web.Controllers.AccountController|Sample fatal error message
-2021-04-30 15:47:37.1770|TRACE|TemplateSystem.Web.Controllers.AccountController|Sample trace message
-2021-04-30 15:47:37.2209|DEBUG|TemplateSystem.Web.Controllers.AccountController|Sample debug message
-2021-04-30 15:47:37.2209|INFO|TemplateSystem.Web.Controllers.AccountController|Sample informational message
-2021-04-30 15:47:37.2209|WARN|TemplateSystem.Web.Controllers.AccountController|Sample warning message
-2021-04-30 15:47:37.2209|ERROR|TemplateSystem.Web.Controllers.AccountController|Sample error message
-2021-04-30 15:47:37.2359|FATAL|TemplateSystem.Web.Controllers.AccountController|Sample fatal error message
-2021-04-30 15:48:10.5438|TRACE|TemplateSystem.Web.Controllers.HomeController|Accedio al Home/Index
+2021-05-09 17:05:17.1449|TRACE|TemplateSystem.Web.Controllers.AccountController|Sample trace message
+2021-05-09 17:05:17.2326|DEBUG|TemplateSystem.Web.Controllers.AccountController|Sample debug message
+2021-05-09 17:05:17.2326|INFO|TemplateSystem.Web.Controllers.AccountController|Sample informational message
+2021-05-09 17:05:17.2326|WARN|TemplateSystem.Web.Controllers.AccountController|Sample warning message
+2021-05-09 17:05:17.2326|ERROR|TemplateSystem.Web.Controllers.AccountController|Sample error message
+2021-05-09 17:05:17.2326|FATAL|TemplateSystem.Web.Controllers.AccountController|Sample fatal error message
+2021-05-09 17:05:55.3046|TRACE|TemplateSystem.Web.Controllers.HomeController|Accedio al Home/Index
+2021-05-09 17:06:48.3729|TRACE|TemplateSystem.Web.Controllers.AccountController|Sample trace message
+2021-05-09 17:06:48.3729|DEBUG|TemplateSystem.Web.Controllers.AccountController|Sample debug message
+2021-05-09 17:06:48.3729|INFO|TemplateSystem.Web.Controllers.AccountController|Sample informational message
+2021-05-09 17:06:48.3729|WARN|TemplateSystem.Web.Controllers.AccountController|Sample warning message
+2021-05-09 17:06:48.3729|ERROR|TemplateSystem.Web.Controllers.AccountController|Sample error message
+2021-05-09 17:06:48.3729|FATAL|TemplateSystem.Web.Controllers.AccountController|Sample fatal error message
+2021-05-09 17:06:48.4568|TRACE|TemplateSystem.Web.Controllers.AccountController|Sample trace message
+2021-05-09 17:06:48.4568|DEBUG|TemplateSystem.Web.Controllers.AccountController|Sample debug message
+2021-05-09 17:06:48.4568|INFO|TemplateSystem.Web.Controllers.AccountController|Sample informational message
+2021-05-09 17:06:48.4568|WARN|TemplateSystem.Web.Controllers.AccountController|Sample warning message
+2021-05-09 17:06:48.4568|ERROR|TemplateSystem.Web.Controllers.AccountController|Sample error message
+2021-05-09 17:06:48.4568|FATAL|TemplateSystem.Web.Controllers.AccountController|Sample fatal error message
+2021-05-09 17:06:58.4013|TRACE|TemplateSystem.Web.Controllers.HomeController|Accedio al Home/Index
+2021-05-09 17:07:27.9468|TRACE|TemplateSystem.Web.Controllers.AccountController|Sample trace message
+2021-05-09 17:07:27.9468|DEBUG|TemplateSystem.Web.Controllers.AccountController|Sample debug message
+2021-05-09 17:07:27.9468|INFO|TemplateSystem.Web.Controllers.AccountController|Sample informational message
+2021-05-09 17:07:27.9468|WARN|TemplateSystem.Web.Controllers.AccountController|Sample warning message
+2021-05-09 17:07:27.9468|ERROR|TemplateSystem.Web.Controllers.AccountController|Sample error message
+2021-05-09 17:07:27.9468|FATAL|TemplateSystem.Web.Controllers.AccountController|Sample fatal error message
+2021-05-09 17:07:28.0335|TRACE|TemplateSystem.Web.Controllers.AccountController|Sample trace message
+2021-05-09 17:07:28.0335|DEBUG|TemplateSystem.Web.Controllers.AccountController|Sample debug message
+2021-05-09 17:07:28.0335|INFO|TemplateSystem.Web.Controllers.AccountController|Sample informational message
+2021-05-09 17:07:28.0335|WARN|TemplateSystem.Web.Controllers.AccountController|Sample warning message
+2021-05-09 17:07:28.0335|ERROR|TemplateSystem.Web.Controllers.AccountController|Sample error message
+2021-05-09 17:07:28.0335|FATAL|TemplateSystem.Web.Controllers.AccountController|Sample fatal error message
+2021-05-09 17:07:54.1652|TRACE|TemplateSystem.Web.Controllers.HomeController|Accedio al Home/Index
+2021-05-09 17:08:40.6409|TRACE|TemplateSystem.Web.Controllers.AccountController|Sample trace message
+2021-05-09 17:08:40.6409|DEBUG|TemplateSystem.Web.Controllers.AccountController|Sample debug message
+2021-05-09 17:08:40.6409|INFO|TemplateSystem.Web.Controllers.AccountController|Sample informational message
+2021-05-09 17:08:40.6409|WARN|TemplateSystem.Web.Controllers.AccountController|Sample warning message
+2021-05-09 17:08:40.6409|ERROR|TemplateSystem.Web.Controllers.AccountController|Sample error message
+2021-05-09 17:08:40.6409|FATAL|TemplateSystem.Web.Controllers.AccountController|Sample fatal error message
+2021-05-09 17:08:40.7067|TRACE|TemplateSystem.Web.Controllers.AccountController|Sample trace message
+2021-05-09 17:08:40.7067|DEBUG|TemplateSystem.Web.Controllers.AccountController|Sample debug message
+2021-05-09 17:08:40.7067|INFO|TemplateSystem.Web.Controllers.AccountController|Sample informational message
+2021-05-09 17:08:40.7067|WARN|TemplateSystem.Web.Controllers.AccountController|Sample warning message
+2021-05-09 17:08:40.7067|ERROR|TemplateSystem.Web.Controllers.AccountController|Sample error message
+2021-05-09 17:08:40.7067|FATAL|TemplateSystem.Web.Controllers.AccountController|Sample fatal error message
+2021-05-09 17:09:37.5042|TRACE|TemplateSystem.Web.Controllers.HomeController|Accedio al Home/Index
+2021-05-09 17:09:52.4476|TRACE|TemplateSystem.Web.Controllers.AccountController|Sample trace message
+2021-05-09 17:09:52.4476|DEBUG|TemplateSystem.Web.Controllers.AccountController|Sample debug message
+2021-05-09 17:09:52.4476|INFO|TemplateSystem.Web.Controllers.AccountController|Sample informational message
+2021-05-09 17:09:52.4476|WARN|TemplateSystem.Web.Controllers.AccountController|Sample warning message
+2021-05-09 17:09:52.4476|ERROR|TemplateSystem.Web.Controllers.AccountController|Sample error message
+2021-05-09 17:09:52.4616|FATAL|TemplateSystem.Web.Controllers.AccountController|Sample fatal error message
+2021-05-09 17:09:52.5304|TRACE|TemplateSystem.Web.Controllers.AccountController|Sample trace message
+2021-05-09 17:09:52.5304|DEBUG|TemplateSystem.Web.Controllers.AccountController|Sample debug message
+2021-05-09 17:09:52.5304|INFO|TemplateSystem.Web.Controllers.AccountController|Sample informational message
+2021-05-09 17:09:52.5304|WARN|TemplateSystem.Web.Controllers.AccountController|Sample warning message
+2021-05-09 17:09:52.5304|ERROR|TemplateSystem.Web.Controllers.AccountController|Sample error message
+2021-05-09 17:09:52.5304|FATAL|TemplateSystem.Web.Controllers.AccountController|Sample fatal error message
+2021-05-09 17:10:23.6468|TRACE|TemplateSystem.Web.Controllers.HomeController|Accedio al Home/Index
+2021-05-09 17:10:51.7531|TRACE|TemplateSystem.Web.Controllers.AccountController|Sample trace message
+2021-05-09 17:10:51.7531|DEBUG|TemplateSystem.Web.Controllers.AccountController|Sample debug message
+2021-05-09 17:10:51.7531|INFO|TemplateSystem.Web.Controllers.AccountController|Sample informational message
+2021-05-09 17:10:51.7531|WARN|TemplateSystem.Web.Controllers.AccountController|Sample warning message
+2021-05-09 17:10:51.7531|ERROR|TemplateSystem.Web.Controllers.AccountController|Sample error message
+2021-05-09 17:10:51.7581|FATAL|TemplateSystem.Web.Controllers.AccountController|Sample fatal error message
+2021-05-09 17:10:51.8129|TRACE|TemplateSystem.Web.Controllers.AccountController|Sample trace message
+2021-05-09 17:10:51.8129|DEBUG|TemplateSystem.Web.Controllers.AccountController|Sample debug message
+2021-05-09 17:10:51.8129|INFO|TemplateSystem.Web.Controllers.AccountController|Sample informational message
+2021-05-09 17:10:51.8129|WARN|TemplateSystem.Web.Controllers.AccountController|Sample warning message
+2021-05-09 17:10:51.8129|ERROR|TemplateSystem.Web.Controllers.AccountController|Sample error message
+2021-05-09 17:10:51.8129|FATAL|TemplateSystem.Web.Controllers.AccountController|Sample fatal error message
+2021-05-09 17:11:13.0229|TRACE|TemplateSystem.Web.Controllers.HomeController|Accedio al Home/Index
+2021-05-09 17:11:29.4215|TRACE|TemplateSystem.Web.Controllers.HomeController|Accedio al Home/Index
+2021-05-09 17:11:44.3416|TRACE|TemplateSystem.Web.Controllers.HomeController|Accedio al Home/Index
