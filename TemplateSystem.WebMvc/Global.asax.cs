@@ -4,9 +4,9 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using TemplateSystem.Web.Controllers;
+using TemplateSystem.WebMvc.Controllers;
 
-namespace TemplateSystem.Web
+namespace TemplateSystem.WebMvc
 {
     public class MvcApplication : System.Web.HttpApplication
     {
