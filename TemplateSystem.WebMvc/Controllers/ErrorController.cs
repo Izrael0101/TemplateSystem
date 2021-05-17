@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace TemplateSystem.Web.Controllers
+namespace TemplateSystem.WebMvc.Controllers
 {
     public class ErrorController : Controller
     {

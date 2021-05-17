@@ -7,7 +7,7 @@ using System.Web.Security;
 using TemplateSystem.Entity.Models;
 using NLog;
 
-namespace TemplateSystem.Web.Controllers
+namespace TemplateSystem.WebMvc.Controllers
 {
     public class AccountController : Controller
     {
