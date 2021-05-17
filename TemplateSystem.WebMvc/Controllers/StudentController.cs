@@ -5,7 +5,7 @@ using System.Web.Mvc;
 using TemplateSystem.Entity.Models;
 using TemplateSystem.Services;
 
-namespace TemplateSystem.Web.Controllers
+namespace TemplateSystem.WebMvc.Controllers
 {
     public class StudentController : Controller
     {

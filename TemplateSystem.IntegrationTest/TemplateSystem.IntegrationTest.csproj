@@ -70,10 +70,6 @@
       <Project>{6670e584-c2d5-40eb-b928-c4605159b1cc}</Project>
       <Name>TemplateSystem.WebApi</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TemplateSystem.Web\TemplateSystem.Web.csproj">
-      <Project>{3204d48e-adeb-4866-9fac-fb98dd3d1da8}</Project>
-      <Name>TemplateSystem.Web</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
