@@ -118,7 +118,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mapping\StarDescMap.cs" />
+    <Compile Include="Mapping\StudentMap.cs" />
     <Compile Include="TemplateSystemDBContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
