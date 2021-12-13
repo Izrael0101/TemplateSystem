@@ -9,7 +9,7 @@
         // Browser globals
         factory(jQuery);
     }
-}(function($){
+}(function ($) {
     $.fn.wysihtml5.locale["cs-CZ"] = {
         font_styles: {
             normal: "Normální text",
@@ -34,7 +34,7 @@
         link: {
             insert: "Vložit odkaz",
             cancel: "Zrušit",
-	    target: "Otevřít odkaz v novém okně"
+            target: "Otevřít odkaz v novém okně"
         },
         image: {
             insert: "Vložit obrázek",

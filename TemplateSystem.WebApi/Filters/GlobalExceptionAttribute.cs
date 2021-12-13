@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Web;
 using System.Web.Http;
 using System.Web.Http.Filters;
 using System.Web.Http.Tracing;
@@ -27,7 +24,6 @@ namespace TemplateSystem.WebApi.Filters
             {
                 var resp = new HttpResponseMessage(HttpStatusCode.BadRequest) { Content = new StringContent(context.Exception.Message), ReasonPhrase = "ValidationException", };
                 throw new HttpResponseException(resp);
-
             }
             else if (exceptionType == typeof(UnauthorizedAccessException))
             {

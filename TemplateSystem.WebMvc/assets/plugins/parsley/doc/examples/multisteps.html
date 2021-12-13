@@ -1,7 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,104 +25,105 @@
 
     <link href="../../src/parsley.css" rel="stylesheet">
     <style class="example">
-.form-section {
-  padding-left: 15px;
-  border-left: 2px solid #FF851B;
-  display: none;
-}
-.form-section.current {
-  display: inherit;
-}
-.btn-info, .btn-default {
-  margin-top: 10px;
-}
-    </style>
-  </head>
+        .form-section {
+            padding-left: 15px;
+            border-left: 2px solid #FF851B;
+            display: none;
+        }
 
-  <body class="examples">
+            .form-section.current {
+                display: inherit;
+            }
+
+        .btn-info, .btn-default {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body class="examples">
 
     <div class="container">
 
-      <div class="masthead">
-        <div class="header">
-          <h3 class="text-muted"><a href="../../">Parsley</a></h3>
+        <div class="masthead">
+            <div class="header">
+                <h3 class="text-muted"><a href="../../">Parsley</a></h3>
 
-          <span class="social-buttons inline-block">
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://parsleyjs.org" data-text="Parsley, the ultimate javascript form validation library. #parsleyjs" data-via="guillaumepotier" data-related="guillaumepotier" data-hashtags="parsleyjs">Tweet</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <span class="social-buttons inline-block">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://parsleyjs.org" data-text="Parsley, the ultimate javascript form validation library. #parsleyjs" data-via="guillaumepotier" data-related="guillaumepotier" data-hashtags="parsleyjs">Tweet</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-            <iframe src="http://ghbtns.com/github-btn.html?user=guillaumepotier&repo=Parsley.js&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+                    <iframe src="http://ghbtns.com/github-btn.html?user=guillaumepotier&repo=Parsley.js&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
 
-            <iframe src="http://ghbtns.com/github-btn.html?user=guillaumepotier&repo=Parsley.js&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-          </span>
+                    <iframe src="http://ghbtns.com/github-btn.html?user=guillaumepotier&repo=Parsley.js&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+                </span>
+            </div>
         </div>
-      </div>
 
-      <ul class="nav nav-justified">
-        <li><a href="../../">Home</a></li>
-        <li class="active"><a href="../examples.html">Examples</a></li>
-        <li><a href="../index.html">Documentation</a></li>
-        <li><a href="../download.html">Download</a></li>
-        <li><a href="../help.html">Help</a></li>
-        <li><a href="../annotated-source/main.html">Annotated&nbsp;source</a></li>
-        <li><a href="../tests.html">Tests</a></li>
-      </ul>
+        <ul class="nav nav-justified">
+            <li><a href="../../">Home</a></li>
+            <li class="active"><a href="../examples.html">Examples</a></li>
+            <li><a href="../index.html">Documentation</a></li>
+            <li><a href="../download.html">Download</a></li>
+            <li><a href="../help.html">Help</a></li>
+            <li><a href="../annotated-source/main.html">Annotated&nbsp;source</a></li>
+            <li><a href="../tests.html">Tests</a></li>
+        </ul>
 
-      <div class="row">
+        <div class="row">
 
-      <!-- ###################### BEGINNING OF EXAMPLE ######################-->
+            <!-- ###################### BEGINNING OF EXAMPLE ######################-->
 
-        <div class="col-md-4">
-          <h2>Multi steps form demo</h2>
-          <small class="pull-left"><a href="../examples.html">&lt;&lt; Back to examples</a>
-          — <a href="#" class="play">Try it on CodePen</a>
-          </small>
-          <span class="clearfix"></span>
+            <div class="col-md-4">
+                <h2>Multi steps form demo</h2>
+                <small class="pull-left">
+                    <a href="../examples.html">&lt;&lt; Back to examples</a>
+                    — <a href="#" class="play">Try it on CodePen</a>
+                </small>
+                <span class="clearfix"></span>
 
-          <hr>
-          <div class="form-group example">
-<form class="demo-form">
-  <div class="form-section">
-    <label for="firstname">First Name:</label>
-    <input type="text" class="form-control" name="firstname" required />
+                <hr>
+                <div class="form-group example">
+                    <form class="demo-form">
+                        <div class="form-section">
+                            <label for="firstname">First Name:</label>
+                            <input type="text" class="form-control" name="firstname" required />
 
-    <label for="lastname">Last Name:</label>
-    <input type="text" class="form-control" name="lastname" required />
-  </div>
+                            <label for="lastname">Last Name:</label>
+                            <input type="text" class="form-control" name="lastname" required />
+                        </div>
 
-  <div class="form-section">
-    <label for="email">Email:</label>
-    <input type="email" class="form-control" name="email" required />
-  </div>
+                        <div class="form-section">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" name="email" required />
+                        </div>
 
-  <div class="form-section">
-    <label for="color">Favorite color:</label>
-    <input type="text" class="form-control" name="color" required />
-  </div>
+                        <div class="form-section">
+                            <label for="color">Favorite color:</label>
+                            <input type="text" class="form-control" name="color" required />
+                        </div>
 
-  <div class="form-navigation">
-    <button type="button" class="previous btn btn-info pull-left">&lt; Previous</button>
-    <button type="button" class="next btn btn-info pull-right">Next &gt;</button>
-    <input type="submit" class="btn btn-default pull-right" />
-    <span class="clearfix"></span>
-  </div>
-
-</form>
-          </div>
-        </div>
-        <div class="col-md-8">
-          <div class="code-block">
+                        <div class="form-navigation">
+                            <button type="button" class="previous btn btn-info pull-left">&lt; Previous</button>
+                            <button type="button" class="next btn btn-info pull-right">Next &gt;</button>
+                            <input type="submit" class="btn btn-default pull-right" />
+                            <span class="clearfix"></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="code-block">
 <pre><code class="example"></code></pre>
-          </div>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <!-- ###################### END OF EXAMPLE ######################-->
-
-      <!-- Site footer -->
-      <div class="footer">
-        <p>&copy; <a href="https://twitter.com/guillaumepotier" title="Guillaume Potier on Twitter">Guillaume Potier</a> 2014 - <a href="http://wisembly.com">@Wisembly</a></p>
-      </div>
+        <!-- ###################### END OF EXAMPLE ######################-->
+        <!-- Site footer -->
+        <div class="footer">
+            <p>&copy; <a href="https://twitter.com/guillaumepotier" title="Guillaume Potier on Twitter">Guillaume Potier</a> 2014 - <a href="http://wisembly.com">@Wisembly</a></p>
+        </div>
     </div>
 
     <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
@@ -131,8 +131,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/highlight.min.js"></script>
 
     <script src="../../dist/parsley.js"></script>
-    <script class="example">
-$(function () {
+    <script class="example">$(function () {
   var $sections = $('.form-section');
 
   function navigateTo(index) {
@@ -172,8 +171,7 @@ $(function () {
     $(section).find(':input').attr('data-parsley-group', 'block-' + index);
   });
   navigateTo(0); // Start at the beginning
-});
-    </script>
+});</script>
     <script src="../assets/example.js"></script>
-  </body>
+</body>
 </html>

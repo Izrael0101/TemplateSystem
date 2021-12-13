@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using System.Data.Entity;
-using TemplateSystem.Entity.Models;
+using System.Threading.Tasks;
 using TemplateSystem.Data.Models;
+using TemplateSystem.Entity.Models;
 
 namespace TemplateSystem.Repository
 {
     public class StudentRepository : IStudentRepository, IDisposable
     {
-
         private TemplateSystemDBContext _context;
 
         /// <summary>
@@ -20,10 +19,8 @@ namespace TemplateSystem.Repository
         public StudentRepository()
         {
             _context = new TemplateSystemDBContext();
-
         }
 
-        
         public async Task<List<Student>> GetStudentAsync()
         {
             return await _context.Student.ToListAsync();
@@ -34,10 +31,10 @@ namespace TemplateSystem.Repository
             return await _context.Student.FindAsync(id);
         }
 
-        public  async Task CreateStarAsync(Student stardesc)
+        public async Task CreateStarAsync(Student stardesc)
         {
-             _context.Student.Add(stardesc);
-            await _context.SaveChangesAsync(); 
+            _context.Student.Add(stardesc);
+            await _context.SaveChangesAsync();
         }
 
         public async Task EditStudentAsync(Student stardesc)
@@ -52,11 +49,9 @@ namespace TemplateSystem.Repository
             _context.Student.Remove(stardesc);
             await _context.SaveChangesAsync();
         }
-           
-        
-       
 
         #region IDisposable Support
+
         private bool disposedValue = false; // To detect redundant calls
 
         protected virtual void Dispose(bool disposing)
@@ -65,7 +60,6 @@ namespace TemplateSystem.Repository
             {
                 if (disposing)
                 {
-                    
                     _context.Dispose();
                 }
 
@@ -80,7 +74,6 @@ namespace TemplateSystem.Repository
             GC.SuppressFinalize(this);
         }
 
-
-        #endregion
+        #endregion IDisposable Support
     }
 }

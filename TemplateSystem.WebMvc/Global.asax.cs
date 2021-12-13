@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -17,8 +16,6 @@ namespace TemplateSystem.WebMvc
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
-
-
 
         protected void Application_Error(object sender, EventArgs e)
         {
@@ -47,13 +44,14 @@ namespace TemplateSystem.WebMvc
                         // Page not found.
                         routeData.Values.Add("action", "HttpError404");
                         break;
+
                     case 500:
                         // Server error.
                         routeData.Values.Add("action", "HttpError500");
                         break;
 
                     // Here you can handle Views to other error codes.
-                    // I choose a General error template  
+                    // I choose a General error template
                     default:
                         routeData.Values.Add("action", "General");
                         break;
@@ -74,7 +72,5 @@ namespace TemplateSystem.WebMvc
             errorController.Execute(new RequestContext(
                  new HttpContextWrapper(Context), routeData));
         }
-
-
     }
 }

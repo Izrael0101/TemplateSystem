@@ -150,12 +150,12 @@ declare module 'sweetalert2' {
         /**
          * Provide array of SweetAlert2 parameters to show multiple modals, one modal after another.
          */
-        function queue(steps: (SweetAlertOptions|string)[]): Promise<any>;
+        function queue(steps: (SweetAlertOptions | string)[]): Promise<any>;
 
         /**
          * Get the index of current modal in queue. When there's no active queue, null will be returned.
          */
-        function getQueueStep(): string|null;
+        function getQueueStep(): string | null;
 
         /**
          * Insert a modal to queue, you can specify modal positioning with second parameter.
@@ -200,9 +200,9 @@ declare module 'sweetalert2' {
         function noop(): void;
     }
 
-    export type SweetAlertType = 'success'|'error'|'warning'|'info'|'question'|undefined;
+    export type SweetAlertType = 'success' | 'error' | 'warning' | 'info' | 'question' | undefined;
 
-    export type SweetAlertInputType = 'text'|'email'|'password'|'number'|'tel'|'range'|'textarea'|'select'|'radio'|'checkbox'|'file'|'url'|undefined;
+    export type SweetAlertInputType = 'text' | 'email' | 'password' | 'number' | 'tel' | 'range' | 'textarea' | 'select' | 'radio' | 'checkbox' | 'file' | 'url' | undefined;
 
     export type SweetAlertInputOptions = { [inputValue: string]: string };
 
@@ -238,7 +238,7 @@ declare module 'sweetalert2' {
          *
          * @default null
          */
-        html?: string|JQuery;
+        html?: string | JQuery;
 
         /**
          * The type of the modal.
@@ -268,7 +268,7 @@ declare module 'sweetalert2' {
          *
          * @default '500px'
          */
-        width?: number|string;
+        width?: number | string;
 
         /**
          * Modal window padding.
@@ -503,7 +503,7 @@ declare module 'sweetalert2' {
          * If input parameter is set to "select" or "radio", you can provide options.
          * Object keys will represent options values, object values will represent options text values.
          */
-        inputOptions?: SweetAlertInputOptions|Promise<SweetAlertInputOptions>;
+        inputOptions?: SweetAlertInputOptions | Promise<SweetAlertInputOptions>;
 
         /**
          * Automatically remove whitespaces from both ends of a result string.

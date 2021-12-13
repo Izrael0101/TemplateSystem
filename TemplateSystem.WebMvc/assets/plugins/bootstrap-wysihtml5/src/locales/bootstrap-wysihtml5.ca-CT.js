@@ -9,36 +9,36 @@
         // Browser globals
         factory(jQuery);
     }
-}(function($){
+}(function ($) {
     $.fn.wysihtml5.locale["ca-CT"] = {
         font_styles: {
-              normal: "Text normal",
-              h1: "Títol 1",
-              h2: "Títol 2",
-              h3: "Títol 3",
-              h4: "Títol 4",
-              h5: "Títol 5",
-              h6: "Títol 6"
+            normal: "Text normal",
+            h1: "Títol 1",
+            h2: "Títol 2",
+            h3: "Títol 3",
+            h4: "Títol 4",
+            h5: "Títol 5",
+            h6: "Títol 6"
         },
         emphasis: {
-              bold: "Negreta",
-              italic: "Cursiva",
-              underline: "Subratllat"
+            bold: "Negreta",
+            italic: "Cursiva",
+            underline: "Subratllat"
         },
         lists: {
-              unordered: "Llista desordenada",
-              ordered: "Llista ordenada",
-              outdent: "Esborrar tabulació",
-              indent: "Afegir tabulació"
+            unordered: "Llista desordenada",
+            ordered: "Llista ordenada",
+            outdent: "Esborrar tabulació",
+            indent: "Afegir tabulació"
         },
         link: {
-              insert: "Afegir enllaç",
-              cancel: "Cancelar",
-              target: "Obrir enllaç en una finestra"
+            insert: "Afegir enllaç",
+            cancel: "Cancelar",
+            target: "Obrir enllaç en una finestra"
         },
         image: {
-              insert: "Afegir imatge",
-              cancel: "Cancelar"
+            insert: "Afegir imatge",
+            cancel: "Cancelar"
         },
         html: {
             edit: "Editar HTML"

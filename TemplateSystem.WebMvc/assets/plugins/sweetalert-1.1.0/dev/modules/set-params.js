@@ -16,11 +16,10 @@ import {
   _show, show, _hide, hide
 } from './handle-dom';
 
-
 /*
  * Set type, text and actions on modal
  */
-var setParameters = function(params) {
+var setParameters = function (params) {
   var modal = getModal();
 
   var $title = modal.querySelector('h2');
@@ -58,7 +57,6 @@ var setParameters = function(params) {
   hide(modal.querySelectorAll('.sa-icon'));
 
   if (params.type && !isIE8()) {
-
     let validType = false;
 
     for (let i = 0; i < alertTypes.length; i++) {
@@ -85,7 +83,6 @@ var setParameters = function(params) {
 
     // Animate icon
     switch (params.type) {
-
       case 'success':
         addClass($icon, 'animate');
         addClass($icon.querySelector('.sa-tip'), 'animateSuccessTip');

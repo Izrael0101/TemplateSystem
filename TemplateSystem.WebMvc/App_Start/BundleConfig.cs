@@ -1,6 +1,5 @@
 ﻿using System.Web.Optimization;
 
-
 namespace TemplateSystem.WebMvc
 {
     public class BundleConfig
@@ -12,16 +11,13 @@ namespace TemplateSystem.WebMvc
             RegisterLayout(bundles);
 
             BundleTable.EnableOptimizations = true;
-
         }
-
 
         private static void RegisterLogin(BundleCollection bundles)
         {
             //Styles
             bundles.Add(new StyleBundle("~/assets/plugins/jquery-ui").Include(
                 "~/assets/plugins/jquery-ui/jquery-ui.min.css"));
-
 
             bundles.Add(new StyleBundle("~/assets/plugins/bootstrap/4.1.0/css").Include(
                "~/assets/plugins/bootstrap/4.1.0/css/bootstrap.min.css"));
@@ -41,14 +37,11 @@ namespace TemplateSystem.WebMvc
             bundles.Add(new StyleBundle("~/assets/css/material/theme").Include(
                "~/assets/css/material/theme/default.css"));
 
-
             bundles.Add(new StyleBundle("~/assets/plugins/gritter/css").Include(
                "~/assets/plugins/gritter/css/jquery.gritter.css"
            ));
 
-
-            //Scripts          
-            
+            //Scripts
 
             bundles.Add(new ScriptBundle("~/assets/plugins/jquery").Include(
               "~/assets/plugins/jquery/jquery-3.2.1.min.js"));
@@ -76,18 +69,11 @@ namespace TemplateSystem.WebMvc
 
             bundles.Add(new ScriptBundle("~/assets/plugins/pace").Include(
               "~/assets/plugins/pace/pace.min.js"));
-
-
         }
-
 
         public static void RegisterLayout(BundleCollection bundles)
         {
             //Esta es una forma de agregar los estilos minificados
         }
-
-
-
-
     }
 }

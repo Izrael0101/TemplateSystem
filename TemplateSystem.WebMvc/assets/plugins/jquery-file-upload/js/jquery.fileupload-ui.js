@@ -12,7 +12,7 @@
 /* jshint nomen:false */
 /* global define, require, window */
 
-;(function (factory) {
+; (function (factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
         // Register as an anonymous AMD module:
@@ -49,7 +49,6 @@
     // The UI version extends the file upload widget
     // and adds complete user interface interaction:
     $.widget('blueimp.fileupload', $.blueimp.fileupload, {
-
         options: {
             // By default, files added to the widget are uploaded as soon
             // as the user clicks on the start buttons. To enable automatic
@@ -120,8 +119,8 @@
                 }).done(function () {
                     data.context.find('.start').prop('disabled', false);
                     if ((that._trigger('added', e, data) !== false) &&
-                            (options.autoUpload || data.autoUpload) &&
-                            data.autoUpload !== false) {
+                        (options.autoUpload || data.autoUpload) &&
+                        data.autoUpload !== false) {
                         data.submit();
                     }
                 }).fail(function () {
@@ -141,9 +140,9 @@
                     return false;
                 }
                 var that = $(this).data('blueimp-fileupload') ||
-                        $(this).data('fileupload');
+                    $(this).data('fileupload');
                 if (data.context && data.dataType &&
-                        data.dataType.substr(0, 6) === 'iframe') {
+                    data.dataType.substr(0, 6) === 'iframe') {
                     // Iframe Transport does not support progress events.
                     // In lack of an indeterminate progress bar, we set
                     // the progress to 100%, showing the full animated bar:
@@ -165,7 +164,7 @@
                     return false;
                 }
                 var that = $(this).data('blueimp-fileupload') ||
-                        $(this).data('fileupload'),
+                    $(this).data('fileupload'),
                     getFilesFromResponse = data.getFilesFromResponse ||
                         that.options.getFilesFromResponse,
                     files = getFilesFromResponse(data),
@@ -174,7 +173,7 @@
                 if (data.context) {
                     data.context.each(function (index) {
                         var file = files[index] ||
-                                {error: 'Empty file upload result'};
+                            { error: 'Empty file upload result' };
                         deferred = that._addFinishedDeferreds();
                         that._transition($(this)).done(
                             function () {
@@ -215,7 +214,7 @@
                     return false;
                 }
                 var that = $(this).data('blueimp-fileupload') ||
-                        $(this).data('fileupload'),
+                    $(this).data('fileupload'),
                     template,
                     deferred;
                 if (data.context) {
@@ -321,7 +320,7 @@
                     return false;
                 }
                 var that = $(this).data('blueimp-fileupload') ||
-                        $(this).data('fileupload');
+                    $(this).data('fileupload');
                 that._resetFinishedDeferreds();
                 that._transition($(this).find('.fileupload-progress')).done(
                     function () {
@@ -335,7 +334,7 @@
                     return false;
                 }
                 var that = $(this).data('blueimp-fileupload') ||
-                        $(this).data('fileupload'),
+                    $(this).data('fileupload'),
                     deferred = that._addFinishedDeferreds();
                 $.when.apply($, that._getFinishedDeferreds())
                     .done(function () {
@@ -369,7 +368,7 @@
                     return false;
                 }
                 var that = $(this).data('blueimp-fileupload') ||
-                        $(this).data('fileupload'),
+                    $(this).data('fileupload'),
                     removeNode = function () {
                         that._transition(data.context).done(
                             function () {
@@ -418,7 +417,7 @@
                         'DownloadURL',
                         [type, name, url].join(':')
                     );
-                } catch (ignore) {}
+                } catch (ignore) { }
             });
         },
 
@@ -526,7 +525,7 @@
         _cancelHandler: function (e) {
             e.preventDefault();
             var template = $(e.currentTarget)
-                    .closest('.template-upload,.template-download'),
+                .closest('.template-upload,.template-download'),
                 data = template.data('data') || {};
             data.context = data.context || template;
             if (data.abort) {
@@ -704,7 +703,5 @@
             }
             this._super();
         }
-
     });
-
 }));

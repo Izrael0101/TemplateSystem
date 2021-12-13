@@ -1,5 +1,5 @@
 /* global module, require */
-module.exports = function(grunt){
+module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
@@ -52,7 +52,7 @@ module.exports = function(grunt){
             },
             main: {
                 options: {
-                    sourceMap: function(dest){
+                    sourceMap: function (dest) {
                         return dest.replace('.min.js', '.js.map');
                     }
                 },
@@ -67,7 +67,7 @@ module.exports = function(grunt){
                     cwd: 'js/locales/',
                     src: ['*.js', '!*.min.js'],
                     dest: '_build/locales/',
-                    rename: function(dest, name){
+                    rename: function (dest, name) {
                         return dest + name.replace(/\.js$/, '.min.js');
                     }
                 }]
@@ -91,14 +91,14 @@ module.exports = function(grunt){
     grunt.registerTask('finish', 'Prepares repo for commit [test, less:repo, screenshots]', ['test', 'less:repo', 'screenshots']);
     grunt.registerTask('dist', 'Builds minified files', ['less:css', 'less:standalone', 'cssmin', 'uglify']);
 
-    grunt.registerTask('screenshots', 'Rebuilds automated docs screenshots', function(){
+    grunt.registerTask('screenshots', 'Rebuilds automated docs screenshots', function () {
         var phantomjs = require('phantomjs').path;
 
-        grunt.file.recurse('docs/_static/screenshots/', function(abspath){
+        grunt.file.recurse('docs/_static/screenshots/', function (abspath) {
             grunt.file.delete(abspath);
         });
 
-        grunt.file.recurse('docs/_screenshots/', function(abspath, root, subdir, filename){
+        grunt.file.recurse('docs/_screenshots/', function (abspath, root, subdir, filename) {
             if (!/.html$/.test(filename))
                 return;
             subdir = subdir || '';

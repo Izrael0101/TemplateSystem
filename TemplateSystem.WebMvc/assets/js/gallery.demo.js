@@ -1,4 +1,4 @@
-/*   
+/*
 Template Name: Color Admin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 1.6.0
 Author: Sean Ngu
@@ -16,57 +16,56 @@ function calculateDivider() {
     }
     return dividerValue;
 }
-var handleIsotopesGallery = function() {
-	"use strict";
-	$(window).load(function() {
-		var container = $('#gallery');
-		var dividerValue = calculateDivider();
-		var containerWidth = $(container).width() - 20;
-		var columnWidth = containerWidth / dividerValue;
-		$(container).isotope({
-			resizable: true,
-			masonry: {
-				columnWidth: columnWidth
-			}
-		});
-		
-		$(window).smartresize(function() {
-			var dividerValue = calculateDivider();
+var handleIsotopesGallery = function () {
+    "use strict";
+    $(window).load(function () {
+        var container = $('#gallery');
+        var dividerValue = calculateDivider();
+        var containerWidth = $(container).width() - 20;
+        var columnWidth = containerWidth / dividerValue;
+        $(container).isotope({
+            resizable: true,
+            masonry: {
+                columnWidth: columnWidth
+            }
+        });
+
+        $(window).smartresize(function () {
+            var dividerValue = calculateDivider();
             var containerWidth = $(container).width() - 20;
             var columnWidth = containerWidth / dividerValue;
-			$(container).isotope({
-				masonry: { 
-				    columnWidth: columnWidth 
-				}
-			});
-		});
-		
-		var $optionSets = $('#options .gallery-option-set'),
-		$optionLinks = $optionSets.find('a');
-		
-		$optionLinks.click( function(){
-			var $this = $(this);
-			if ($this.hasClass('active')) {
-				return false;
-			}
-			var $optionSet = $this.parents('.gallery-option-set');
-			$optionSet.find('.active').removeClass('active');
-			$this.addClass('active');
-		
-			var options = {};
-			var key = $optionSet.attr('data-option-key');
-			var value = $this.attr('data-option-value');
-				value = value === 'false' ? false : value;
-				options[ key ] = value;
-			$(container).isotope( options );
-			return false;
-		});
-	});
+            $(container).isotope({
+                masonry: {
+                    columnWidth: columnWidth
+                }
+            });
+        });
+
+        var $optionSets = $('#options .gallery-option-set'),
+            $optionLinks = $optionSets.find('a');
+
+        $optionLinks.click(function () {
+            var $this = $(this);
+            if ($this.hasClass('active')) {
+                return false;
+            }
+            var $optionSet = $this.parents('.gallery-option-set');
+            $optionSet.find('.active').removeClass('active');
+            $this.addClass('active');
+
+            var options = {};
+            var key = $optionSet.attr('data-option-key');
+            var value = $this.attr('data-option-value');
+            value = value === 'false' ? false : value;
+            options[key] = value;
+            $(container).isotope(options);
+            return false;
+        });
+    });
 };
 
-
 var Gallery = function () {
-	"use strict";
+    "use strict";
     return {
         //main function
         init: function () {

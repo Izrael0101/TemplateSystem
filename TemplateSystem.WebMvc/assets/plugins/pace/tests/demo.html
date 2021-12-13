@@ -1,14 +1,11 @@
 <head>
-  <link rel="stylesheet" href="../themes/pace-theme-barber-shop.css" />
+    <link rel="stylesheet" href="../themes/pace-theme-barber-shop.css" />
 
-  <script>
-    paceOptions = {
+    <script>paceOptions = {
       elements: true
-    };
-  </script>
-  <script src="../pace.js"></script>
-  <script>
-    function load(time){
+    };</script>
+    <script src="../pace.js"></script>
+    <script>function load(time){
       var x = new XMLHttpRequest()
       x.open('GET', "http://localhost:5646/walter/" + time, true);
       x.send();
@@ -28,8 +25,7 @@
 
     Pace.on('hide', function(){
       console.log('done');
-    });
-
-  </script>
+    });</script>
 </head>
-<body></body>
+<body>
+</body>

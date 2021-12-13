@@ -9,7 +9,6 @@
  */
 
 (function( window, undefined ) {
-
 var Globalize,
 	// private variables
 	regexHex,
@@ -333,7 +332,6 @@ extend = function() {
 					if ( copyIsArray ) {
 						copyIsArray = false;
 						clone = src && isArray(src) ? src : [];
-
 					} else {
 						clone = src && isObject(src) ? src : {};
 					}
@@ -834,7 +832,6 @@ formatDate = function( value, format, culture ) {
 
 		return ret;
 	};
-
 }());
 
 getTokenRegExp = function() {
@@ -1295,7 +1292,6 @@ Globalize.prototype.culture = function( cultureSelector ) {
 //
 
 Globalize.addCultureInfo = function( cultureName, baseCultureName, info ) {
-
 	var base = {},
 		isNew = false;
 
@@ -1501,7 +1497,6 @@ Globalize.parseFloat = function( value, radix, cultureSelector ) {
 		ret = parseInt( value, 16 );
 	}
 	else {
-
 		// determine sign and number
 		var signInfo = parseNegativePattern( value, nf, nf.pattern[0] ),
 			sign = signInfo[ 0 ],
@@ -1581,5 +1576,4 @@ Globalize.culture = function( cultureSelector ) {
 	// getter
 	return this.findClosestCulture( cultureSelector ) || this.cultures[ "default" ];
 };
-
 }( this ));

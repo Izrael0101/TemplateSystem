@@ -25,10 +25,8 @@ body {
   bottom: 0;
   right: 0;
   padding: 10px;
-
   // backdrop
   background-color: transparent;
-
   z-index: 1060;
 
   &.swal2-fade {
@@ -437,7 +435,6 @@ body {
         border-radius: 120px 0 0 120px;
         top: -7px;
         left: -33px;
-
         transform: rotate(-45deg);
         transform-origin: 60px 60px;
       }
@@ -446,7 +443,6 @@ body {
         border-radius: 0 120px 120px 0;
         top: -11px;
         left: 30px;
-
         transform: rotate(-45deg);
         transform-origin: 0 60px;
       }
@@ -458,7 +454,6 @@ body {
       border: 4px solid $swal2-success-border;
       border-radius: 50%;
       box-sizing: content-box;
-
       position: absolute;
       left: -4px;
       top: -4px;
@@ -468,12 +463,10 @@ body {
     .swal2-success-fix { // Hide corners left from animation
       width: 7px;
       height: 90px;
-
       position: absolute;
       left: 28px;
       top: 8px;
       z-index: 1;
-
       transform: rotate(-45deg);
     }
 
@@ -482,25 +475,20 @@ body {
       background-color: $swal2-success;
       display: block;
       border-radius: 2px;
-
       position: absolute;
       z-index: 2;
 
       &[class$='tip'] {
         width: 25px;
-
         left: 14px;
         top: 46px;
-
         transform: rotate(45deg);
       }
 
       &[class$='long'] {
         width: 47px;
-
         right: 8px;
         top: 38px;
-
         transform: rotate(-45deg);
       }
     }
@@ -559,12 +547,10 @@ body {
   }
 }
 
-
 // github.com/limonte/sweetalert2/issues/268
 [class^='swal2'] {
   -webkit-tap-highlight-color: $swal2-transparent;
 }
-
 
 // Modal animations
 
@@ -613,8 +599,6 @@ body {
     animation: none;
   }
 }
-
-
 
 // Success icon animation
 
@@ -709,7 +693,6 @@ body {
     }
   }
 }
-
 
 // Error icon animation
 

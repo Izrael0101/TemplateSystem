@@ -19,7 +19,6 @@ describe('Unit testing jQuery version of easy pie chart', function() {
 		});
 	});
 
-
 	describe('takes size option and', function() {
 		var $canvas;
 		beforeEach(createInstance({
@@ -57,5 +56,4 @@ describe('Unit testing jQuery version of easy pie chart', function() {
 			expect($canvas.height()).toBe(400);
 		});
 	});
-
 });

@@ -10,6 +10,7 @@ namespace TemplateSystem.WebMvc.Controllers
     public class StudentController : Controller
     {
         private readonly IStudentService _service;
+
         public StudentController(IStudentService service)
         {
             _service = service;
@@ -22,6 +23,7 @@ namespace TemplateSystem.WebMvc.Controllers
 
             return View(stars);
         }
+
         public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
@@ -48,7 +50,6 @@ namespace TemplateSystem.WebMvc.Controllers
         {
             if (ModelState.IsValid)
             {
-
                 await _service.AddStarAsync(stardesc);
 
                 return RedirectToAction("Index");
@@ -56,6 +57,7 @@ namespace TemplateSystem.WebMvc.Controllers
 
             return View(stardesc);
         }
+
         // GET: Notes/Edit/5
         public async Task<ActionResult> Edit(int? id)
         {
@@ -71,9 +73,8 @@ namespace TemplateSystem.WebMvc.Controllers
             return View(stardesc);
         }
 
-
         // POST: Notes/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -109,7 +110,6 @@ namespace TemplateSystem.WebMvc.Controllers
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
             await _service.DeleteStarAsync(id);
-
 
             return RedirectToAction("Index");
         }

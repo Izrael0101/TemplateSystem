@@ -51,7 +51,7 @@ $(function () {
             }).fail(function () {
                 $('<div class="alert alert-danger"/>')
                     .text('Upload server currently unavailable - ' +
-                            new Date())
+                        new Date())
                     .appendTo('#fileupload');
             });
         }
@@ -68,8 +68,7 @@ $(function () {
             $(this).removeClass('fileupload-processing');
         }).done(function (result) {
             $(this).fileupload('option', 'done')
-                .call(this, $.Event('done'), {result: result});
+                .call(this, $.Event('done'), { result: result });
         });
     }
-
 });

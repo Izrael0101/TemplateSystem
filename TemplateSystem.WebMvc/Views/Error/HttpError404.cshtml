@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
     ViewBag.SystemName = System.Web.Configuration.WebConfigurationManager.AppSettings["SystemName"].ToString();
     ViewBag.Version = System.Web.Configuration.WebConfigurationManager.AppSettings["Version"].ToString();
@@ -54,13 +53,12 @@
                     The page you're looking for doesn't exist. <br />
                     Perhaps, there pages will help find what you're looking for.
                 </div>
-                <div>                   
+                <div>
                     <a href="@Url.Action("Index", "Home")" class="btn btn-success p-l-20 p-r-20">Go Home</a>
                 </div>
             </div>
         </div>
         <!-- end error -->
-      
         <!-- begin scroll to top btn -->
         <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="material-icons">keyboard_arrow_up</i></a>
         <!-- end scroll to top btn -->
@@ -81,7 +79,8 @@
     @Scripts.Render("~/assets/js/apps.min.js")
     <!-- ================== END BASE JS ================== -->
 
-    <script>$(document).ready(function() {
+    <script>
+$(document).ready(function() {
 			App.init();
 		});</script>
 </body>

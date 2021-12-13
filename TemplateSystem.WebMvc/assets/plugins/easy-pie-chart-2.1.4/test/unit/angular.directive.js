@@ -1,9 +1,9 @@
-describe('angular easypiechart directive', function() {
+describe('angular easypiechart directive', function () {
     var $compile, $rootScope, scope;
 
     beforeEach(module('easypiechart'));
 
-    beforeEach(inject(function(_$compile_, $rootScope){
+    beforeEach(inject(function (_$compile_, $rootScope) {
         scope = $rootScope;
         $compile = _$compile_;
     }));
@@ -16,7 +16,7 @@ describe('angular easypiechart directive', function() {
         expect(element.isolateScope().percent).toBe(0);
     });
 
-    it('inserts the element with a canvas element', function() {
+    it('inserts the element with a canvas element', function () {
         scope.percent = -45;
         scope.options = {};
         var element = angular.element('<div easypiechart percent="percent" options="options"></div>');
@@ -28,14 +28,14 @@ describe('angular easypiechart directive', function() {
     it('gets the options right', function (done) {
         scope.percent = 0;
         scope.options = {
-            animate:{
-                duration:0,
-                enabled:false
+            animate: {
+                duration: 0,
+                enabled: false
             },
-            barColor:'#2C3E50',
-            scaleColor:false,
-            lineWidth:20,
-            lineCap:'circle'
+            barColor: '#2C3E50',
+            scaleColor: false,
+            lineWidth: 20,
+            lineCap: 'circle'
         };
         var element = angular.element('<div easypiechart percent="percent" options="options"></div>');
         $compile(element)(scope);
@@ -54,7 +54,7 @@ describe('angular easypiechart directive', function() {
         expect(element.isolateScope().options.animate.enabled).toBe(true);
     });
 
-    it('takes size option the right way', function() {
+    it('takes size option the right way', function () {
         scope.percent = 0;
         scope.options = {
             size: 200

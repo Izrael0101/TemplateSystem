@@ -9,7 +9,7 @@
         // Browser globals
         factory(jQuery);
     }
-}(function($){
+}(function ($) {
     $.fn.wysihtml5.locale["ko-KR"] = {
         font_styles: {
             normal: "일반",
@@ -53,6 +53,5 @@
             blue: "파란색",
             orange: "주황색"
         }
-
     };
 }));

@@ -1,19 +1,19 @@
-/*   
+/*
 Template Name: Color Admin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 1.6.0
 Author: Sean Ngu
 Website: http://www.seantheme.com/color-admin-v1.6/admin/
 */
 
-var handleJqueryFileUpload = function() {
-     // Initialize the jQuery File Upload widget:
+var handleJqueryFileUpload = function () {
+    // Initialize the jQuery File Upload widget:
     $('#fileupload').fileupload({
         autoUpload: false,
         disableImageResize: /Android(?!.*Chrome)|Opera/.test(window.navigator.userAgent),
         maxFileSize: 5000000,
         acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
         // Uncomment the following to send cross-domain cookies:
-        //xhrFields: {withCredentials: true},                
+        //xhrFields: {withCredentials: true},
     });
 
     // Enable iframe cross-domain access via redirect option:
@@ -47,13 +47,12 @@ var handleJqueryFileUpload = function() {
         $(this).removeClass('fileupload-processing');
     }).done(function (result) {
         $(this).fileupload('option', 'done')
-        .call(this, $.Event('done'), {result: result});
+            .call(this, $.Event('done'), { result: result });
     });
 };
 
-
 var FormMultipleUpload = function () {
-	"use strict";
+    "use strict";
     return {
         //main function
         init: function () {

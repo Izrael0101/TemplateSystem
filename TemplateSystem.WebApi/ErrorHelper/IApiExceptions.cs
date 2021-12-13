@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Web;
+﻿using System.Net;
 
 namespace TemplateSystem.WebApi.ErrorHelper
 {
@@ -15,14 +11,17 @@ namespace TemplateSystem.WebApi.ErrorHelper
         /// ErrorCode
         /// </summary>
         int ErrorCode { get; set; }
+
         /// <summary>
         /// ErrorDescription
         /// </summary>
         string ErrorDescription { get; set; }
+
         /// <summary>
         /// HttpStatus
         /// </summary>
         HttpStatusCode HttpStatus { get; set; }
+
         /// <summary>
         /// ReasonPhrase
         /// </summary>

@@ -1,4 +1,4 @@
 require(['config'], function () {
-  require(['src/parsley'], function (Parsley) {
-  });
+    require(['src/parsley'], function (Parsley) {
+    });
 });

@@ -1,35 +1,37 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300); // Open Sans font
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);   // Condensed
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700); // Condensed
 
-@mixin retina-background($url, $type:png) {
+@mixin retina-background($url, $type: png) {
   background-image: url("#{$url}.#{$type}");
-  background-image: -webkit-image-set(url("#{$url}.#{$type}") 1x,
-                            url("#{$url}@2x.#{$type}") 2x);
+  background-image: -webkit-image-set(url("#{$url}.#{$type}") 1x, url("#{$url}@2x.#{$type}") 2x);
 }
 
 body {
-	background-color: #f2f4f6;
+  background-color: #f2f4f6;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
 }
 
 h1 {
-  @include retina-background("images/logo_big"); 
+  @include retina-background("images/logo_big");
   width: 385px;
   height: 81px;
   text-indent: -9999px;
   white-space: nowrap;
   margin: 50px auto;
+
   @media all and (max-width: 420px) {
     width: 300px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
   }
+
   @media all and (max-width: 330px) {
     width: 250px;
   }
 }
+
 h2 {
   font-size: 20px;
   color: #A9B2BC;
@@ -39,6 +41,7 @@ h2 {
   text-align: center;
   display: block;
 }
+
 h3 {
   font-size: 28px;
   color: #C7CCD1;
@@ -47,10 +50,12 @@ h3 {
   margin-top: 100px;
   text-align: center;
   position: relative;
+
   &#download-section {
     margin-top: 50px;
     padding-top: 40px;
   }
+
   &::after {
     content: "";
     background-color: #e2e5e8;
@@ -83,6 +88,7 @@ p {
   color: #848D94;
   line-height: 25px;
   text-align: left;
+
   &.center {
     text-align: center;
   }
@@ -91,18 +97,23 @@ p {
     color: #8A8F94;
     font-weight: 600;
   }
+
   a {
     color: #9ECADF;
     font-weight: 600;
+
     &:hover {
       text-decoration: underline;
     }
+
     &.twitter {
       color: #5eaade;
     }
+
     &.dribbble {
       color: #f26798;
     }
+
     &.github {
       color: #323131;
     }
@@ -124,24 +135,31 @@ button, .button {
   padding: 15px 35px;
   margin: 26px 5px 0 5px;
   cursor: pointer;
+
   &:focus {
     outline: none;
   }
+
   &:hover {
     background-color: darken($btnBlue, 3%);
   }
+
   &:active {
     background-color: darken($btnBlue, 10%);
   }
+
   &.cancel {
     background-color: $btnGray;
+
     &:hover {
       background-color: darken($btnGray, 3%);
     }
+
     &:active {
       background-color: darken($btnGray, 10%);
     }
   }
+
   &.download {
     position: fixed;
     right: 30px;
@@ -176,18 +194,23 @@ pre {
   .str {
     color: #e6db74;
   }
+
   .func {
     color: #66d9ef;
   }
+
   .val {
     color: #a381ff;
   }
+
   .tag {
     color: #e92772;
   }
+
   .attr {
     color: #a6e22d;
   }
+
   .arg {
     color: #fd9720;
   }
@@ -205,6 +228,7 @@ pre {
     margin: 5px auto;
     padding: 46px 20px;
   }
+
   @media all and (max-width: 440px) {
     width: auto;
   }
@@ -216,13 +240,15 @@ pre {
     margin: 0 auto;
     font-weight: 400;
   }
+
   &.sweet h4 {
     width: 117px;
     height: 25px;
     margin-top: -3px;
     text-indent: -9999px;
-    @include retina-background("images/logo_small"); 
+    @include retina-background("images/logo_small");
   }
+
   h5 {
     margin-bottom: -7px;
     text-align: left;
@@ -255,13 +281,13 @@ pre {
   }
 }
 
-
 ul.examples {
   list-style-type: none;
   width: 700px;
   margin: 0 auto;
   text-align: left;
   padding-left: 0;
+
   @media all and (max-width: 758px) {
     width: auto;
   }
@@ -280,6 +306,7 @@ ul.examples {
       margin: 0 auto;
     }
   }
+
   .ui {
     width: 300px;
     text-align: center;
@@ -303,11 +330,11 @@ ul.examples {
       margin-bottom: 60px;
     }
   }
+
   .warning pre {
     margin-top: 93px;
   }
 }
-
 
 ol {
   max-width: 700px;
@@ -324,7 +351,6 @@ ol {
   }
 }
 
-
 table {
   width: 700px;
   font-size: 14px;
@@ -332,8 +358,9 @@ table {
   margin: 10px auto;
   text-align: left;
   border-collapse: collapse;
+
   @media all and (max-width: 750px) {
-    width: auto; 
+    width: auto;
     margin: 10px 20px;
   }
 
@@ -344,6 +371,7 @@ table {
     font-weight: 400;
     text-align: center;
     position: relative;
+
     .border-left, .border-right {
       position: absolute;
       background-color: white;
@@ -353,33 +381,40 @@ table {
       width: 37px;
       height: 37px;
     }
+
     .border-right {
       left: auto;
       right: -17px;
     }
+
     @media all and (max-width: 750px) {
       &:nth-child(2) {
-       display: none;
-     }
+        display: none;
+      }
     }
   }
 
   td {
     padding: 10px 20px;
     vertical-align: top;
+
     &:first-child {
       padding-left: 0px;
     }
+
     &:last-child {
       padding-right: 0px;
     }
+
     @media all and (max-width: 750px) {
       &:nth-child(2) {
-       display: none;
-     }
+        display: none;
+      }
     }
+
     @media all and (max-width: 360px) {
       padding: 10px 4px;
+
       b {
         font-size: 13px;
       }
@@ -414,7 +449,6 @@ footer {
   }
 }
 
-
 // Theme example (Twitter)
 // Twitter Theme for SweetAlert
 // By Tristan Edwards
@@ -432,7 +466,7 @@ footer {
   border-radius: 6px;
   box-shadow: 0px 0px 0px 1px rgba(black, 0.11), 0px 6px 30px rgba(black, 0.14);
 
-  ~ .sweet-overlay {  
+  ~ .sweet-overlay {
     background: rgba(41,47,51,0.9);
   }
 
@@ -442,7 +476,7 @@ footer {
     left: 0;
     right: 0;
     height: $header-height;
-    line-height: $header-height; 
+    line-height: $header-height;
     font-size: 16px;
     font-weight: 400;
     color: #8899a6;
@@ -467,8 +501,10 @@ footer {
     margin: -$padding;
     margin-top: 0;
   }
+
   &[data-has-confirm-button=false][data-has-cancel-button=false] {
     padding-bottom: 10px;
+
     .sa-button-container {
       display: none;
     }
@@ -484,8 +520,10 @@ footer {
     font-weight: 600;
     padding: 8px 16px;
     position: relative;
+
     &:focus, &.cancel:focus {
       box-shadow: none !important;
+
       &::before {
         content: "";
         position: absolute;
@@ -505,6 +543,7 @@ footer {
       border: 1px solid #3b88c3;
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
       margin-right: $padding;
+
       &:hover {
         background-color: #55acee;
         background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.15));
@@ -512,6 +551,7 @@ footer {
         border-color: #3b88c3;
       }
     }
+
     &.cancel {
       color: #66757e;
       background-color: #f5f8fa;
@@ -519,12 +559,14 @@ footer {
       text-shadow: 0px -1px 0px white;
       margin-right: 9px;
       border: 1px solid #e1e8ed;
+
       &:hover, &:focus:hover {
         background-color: #e1e8ed;
         background-image: linear-gradient(#fff,#e1e8ed);
         -ms-filter: "progid:DXImageTransform.Microsoft.gradient(enabled=false)";
         border-color: #e1e8ed;
       }
+
       &:focus {
         background: #fff;
         border-color: #fff;
@@ -546,6 +588,7 @@ footer {
     box-shadow: none;
     font-size: 13px;
     margin: 10px 0;
+
     &:focus {
       border-color: #94A1A6;
       box-shadow: inset 0 0 0 1px rgba(77, 99, 107, 0.7);
@@ -561,6 +604,7 @@ footer {
     border: none;
     background-color: #fbedc0;
     margin-bottom: 6px;
+
     &.show {
       border: 1px solid #f0e1b9;
     }
@@ -568,6 +612,7 @@ footer {
     .icon {
       display: none;
     }
+
     p {
       color: #292f33;
       font-weight: 600;
@@ -575,6 +620,3 @@ footer {
     }
   }
 }
-
-
-

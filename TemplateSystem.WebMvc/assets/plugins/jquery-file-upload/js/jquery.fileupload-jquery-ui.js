@@ -12,7 +12,7 @@
 /* jshint nomen:false */
 /* global define, require, window */
 
-;(function (factory) {
+; (function (factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
         // Register as an anonymous AMD module:
@@ -28,7 +28,6 @@
     'use strict';
 
     $.widget('blueimp.fileupload', $.blueimp.fileupload, {
-
         options: {
             processdone: function (e, data) {
                 data.context.find('.start').button('enable');
@@ -53,7 +52,7 @@
                     .find('.progress-extended').each(function () {
                         $(this).html(
                             ($this.data('blueimp-fileupload') ||
-                                    $this.data('fileupload'))
+                                $this.data('fileupload'))
                                 ._renderExtendedProgress(data)
                         );
                     });
@@ -65,11 +64,11 @@
                 showIconText = $(window).width() > 480;
             node.find('.progress').empty().progressbar();
             node.find('.start').button({
-                icons: {primary: 'ui-icon-circle-arrow-e'},
+                icons: { primary: 'ui-icon-circle-arrow-e' },
                 text: showIconText
             });
             node.find('.cancel').button({
-                icons: {primary: 'ui-icon-cancel'},
+                icons: { primary: 'ui-icon-cancel' },
                 text: showIconText
             });
             if (node.hasClass('fade')) {
@@ -82,7 +81,7 @@
             var node = this._super(func, files),
                 showIconText = $(window).width() > 480;
             node.find('.delete').button({
-                icons: {primary: 'ui-icon-trash'},
+                icons: { primary: 'ui-icon-trash' },
                 text: showIconText
             });
             if (node.hasClass('fade')) {
@@ -119,15 +118,15 @@
                 .find('.fileinput-button').each(function () {
                     var input = $(this).find('input:file').detach();
                     $(this)
-                        .button({icons: {primary: 'ui-icon-plusthick'}})
+                        .button({ icons: { primary: 'ui-icon-plusthick' } })
                         .append(input);
                 })
                 .end().find('.start')
-                .button({icons: {primary: 'ui-icon-circle-arrow-e'}})
+                .button({ icons: { primary: 'ui-icon-circle-arrow-e' } })
                 .end().find('.cancel')
-                .button({icons: {primary: 'ui-icon-cancel'}})
+                .button({ icons: { primary: 'ui-icon-cancel' } })
                 .end().find('.delete')
-                .button({icons: {primary: 'ui-icon-trash'}})
+                .button({ icons: { primary: 'ui-icon-trash' } })
                 .end().find('.progress').progressbar();
         },
 
@@ -149,7 +148,5 @@
                 .end().find('.progress').progressbar('destroy');
             this._super();
         }
-
     });
-
 }));

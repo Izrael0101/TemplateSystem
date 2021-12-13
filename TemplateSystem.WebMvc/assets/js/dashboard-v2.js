@@ -1,11 +1,11 @@
-/*   
+/*
 Template Name: Color Admin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 1.6.0
 Author: Sean Ngu
 Website: http://www.seantheme.com/color-admin-v1.6/admin/
 */
 
-var getMonthName = function(number) {
+var getMonthName = function (number) {
     var month = [];
     month[0] = "January";
     month[1] = "February";
@@ -19,49 +19,49 @@ var getMonthName = function(number) {
     month[9] = "October";
     month[10] = "November";
     month[11] = "December";
-    
+
     return month[number];
 };
 
-var getDate = function(date) {
+var getDate = function (date) {
     var currentDate = new Date(date);
     var dd = currentDate.getDate();
     var mm = currentDate.getMonth() + 1;
     var yyyy = currentDate.getFullYear();
-    
+
     if (dd < 10) {
         dd = '0' + dd;
     }
     if (mm < 10) {
         mm = '0' + mm;
     }
-    currentDate = yyyy+'-'+mm+'-'+dd;
-    
+    currentDate = yyyy + '-' + mm + '-' + dd;
+
     return currentDate;
 };
 
-var handleVisitorsLineChart = function() {
+var handleVisitorsLineChart = function () {
     var green = '#0D888B';
     var greenLight = '#00ACAC';
     var blue = '#3273B1';
     var blueLight = '#348FE2';
     var blackTransparent = 'rgba(0,0,0,0.6)';
     var whiteTransparent = 'rgba(255,255,255,0.4)';
-    
+
     Morris.Line({
         element: 'visitors-line-chart',
         data: [
-            {x: '2014-02-01', y: 60, z: 30},
-            {x: '2014-03-01', y: 70, z: 40},
-            {x: '2014-04-01', y: 40, z: 10},
-            {x: '2014-05-01', y: 100, z: 70},
-            {x: '2014-06-01', y: 40, z: 10},
-            {x: '2014-07-01', y: 80, z: 50},
-            {x: '2014-08-01', y: 70, z: 40}
+            { x: '2014-02-01', y: 60, z: 30 },
+            { x: '2014-03-01', y: 70, z: 40 },
+            { x: '2014-04-01', y: 40, z: 10 },
+            { x: '2014-05-01', y: 100, z: 70 },
+            { x: '2014-06-01', y: 40, z: 10 },
+            { x: '2014-07-01', y: 80, z: 50 },
+            { x: '2014-08-01', y: 70, z: 40 }
         ],
         xkey: 'x',
         ykeys: ['y', 'z'],
-        xLabelFormat: function(x) {
+        xLabelFormat: function (x) {
             x = getMonthName(x.getMonth());
             return x.toString();
         },
@@ -80,14 +80,14 @@ var handleVisitorsLineChart = function() {
     });
 };
 
-var handleVisitorsDonutChart = function() {
+var handleVisitorsDonutChart = function () {
     var green = '#00acac';
     var blue = '#348fe2';
     Morris.Donut({
         element: 'visitors-donut-chart',
         data: [
-            {label: "New Visitors", value: 900},
-            {label: "Return Visitors", value: 1200}
+            { label: "New Visitors", value: 900 },
+            { label: "Return Visitors", value: 1200 }
         ],
         colors: [green, blue],
         labelFamily: 'Open Sans',
@@ -97,7 +97,7 @@ var handleVisitorsDonutChart = function() {
     });
 };
 
-var handleVisitorsVectorMap = function() {
+var handleVisitorsVectorMap = function () {
     if ($('#visitors-map').length !== 0) {
         map = new jvm.WorldMap({
             map: 'world_merc_en',
@@ -135,11 +135,11 @@ var handleVisitorsVectorMap = function() {
             },
             series: {
                 regions: [{
-                values: {
-                    IN:'#00acac',
-                    US:'#00acac',
-                    KR:'#00acac'
-                }
+                    values: {
+                        IN: '#00acac',
+                        US: '#00acac',
+                        KR: '#00acac'
+                    }
                 }]
             },
             focusOn: {
@@ -152,8 +152,8 @@ var handleVisitorsVectorMap = function() {
     }
 };
 
-var handleScheduleCalendar = function() {
-    var monthNames = ["January", "February", "March", "April", "May", "June",  "July", "August", "September", "October", "November", "December"];
+var handleScheduleCalendar = function () {
+    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var dayNames = ["S", "M", "T", "W", "T", "F", "S"];
 
     var now = new Date(),
@@ -193,18 +193,18 @@ var handleScheduleCalendar = function() {
         months: monthNames,
         days: dayNames,
         events: events,
-        popover_options:{
+        popover_options: {
             placement: 'top',
             html: true
         }
     });
-    $(calendarTarget).find('td.event').each(function() {
+    $(calendarTarget).find('td.event').each(function () {
         var backgroundColor = $(this).css('background-color');
         $(this).removeAttr('style');
         $(this).find('a').css('background-color', backgroundColor);
     });
-    $(calendarTarget).find('.icon-arrow-left, .icon-arrow-right').parent().on('click', function() {
-        $(calendarTarget).find('td.event').each(function() {
+    $(calendarTarget).find('.icon-arrow-left, .icon-arrow-right').parent().on('click', function () {
+        $(calendarTarget).find('td.event').each(function () {
             var backgroundColor = $(this).css('background-color');
             $(this).removeAttr('style');
             $(this).find('a').css('background-color', backgroundColor);
@@ -212,9 +212,9 @@ var handleScheduleCalendar = function() {
     });
 };
 
-var handleDashboardGritterNotification = function() {
-    $(window).load(function() {
-        setTimeout(function() {
+var handleDashboardGritterNotification = function () {
+    $(window).load(function () {
+        setTimeout(function () {
             $.gritter.add({
                 title: 'Welcome back, Admin!',
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus lacus ut lectus rutrum placerat.',
@@ -228,7 +228,7 @@ var handleDashboardGritterNotification = function() {
 };
 
 var DashboardV2 = function () {
-	"use strict";
+    "use strict";
     return {
         //main function
         init: function () {
@@ -236,7 +236,6 @@ var DashboardV2 = function () {
             handleVisitorsDonutChart();
             handleVisitorsVectorMap();
             handleScheduleCalendar();
-            
         }
     };
 }();

@@ -1,10 +1,5 @@
 ﻿using NLog;
-using System.Collections.Generic;
-using System.Net;
-using System.Threading.Tasks;
 using System.Web.Mvc;
-using TemplateSystem.Entity.Models;
-using TemplateSystem.Services;
 
 namespace TemplateSystem.WebMvc.Controllers
 {
@@ -25,8 +20,6 @@ namespace TemplateSystem.WebMvc.Controllers
                 logger.Error("Ocurrio un error en el try de Home/Index");
                 throw;
             }
-
-            
         }
     }
 }

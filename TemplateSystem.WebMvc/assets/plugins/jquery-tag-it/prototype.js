@@ -1,9 +1,8 @@
 $("#myTags").tagit({
-
     // Options
     fieldName: "skills",
     availableTags: ["c++", "java", "php", "javascript", "ruby", "python", "c"],
-    autocomplete: {delay: 0, minLength: 2},
+    autocomplete: { delay: 0, minLength: 2 },
     showAutocompleteOnFocus: false,
     removeConfirmation: false,
     caseSensitive: true,
@@ -18,23 +17,22 @@ $("#myTags").tagit({
     placeholderText: null,
 
     // Events
-    beforeTagAdded: function(event, ui) {
+    beforeTagAdded: function (event, ui) {
         console.log(ui.tag);
     },
-    afterTagAdded: function(event, ui) {
+    afterTagAdded: function (event, ui) {
         console.log(ui.tag);
     },
-    beforeTagRemoved: function(event, ui) {
+    beforeTagRemoved: function (event, ui) {
         console.log(ui.tag);
     },
-    onTagExists: function(event, ui) {
+    onTagExists: function (event, ui) {
         console.log(ui.tag);
     },
-    onTagClicked: function(event, ui) {
+    onTagClicked: function (event, ui) {
         console.log(ui.tag);
     },
-    onTagLimitExceeded: function(event, ui) {
+    onTagLimitExceeded: function (event, ui) {
         console.log(ui.tag);
     }
-
 });

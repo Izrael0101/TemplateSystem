@@ -1,8 +1,8 @@
-using System.Web.Http;
-using WebActivatorEx;
-using TemplateSystem.WebApi;
 using Swashbuckle.Application;
 using System.IO;
+using System.Web.Http;
+using TemplateSystem.WebApi;
+using WebActivatorEx;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
@@ -75,7 +75,6 @@ namespace TemplateSystem.WebApi
                     // Very helpful when you have multiple Swagger pages open, to tell them apart.
                     //
                     //c.DocumentTitle("My Swagger UI");
-
                 });
         }
     }

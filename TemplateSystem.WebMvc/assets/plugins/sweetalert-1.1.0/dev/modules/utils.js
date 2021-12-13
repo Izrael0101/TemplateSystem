@@ -1,7 +1,7 @@
 /*
  * Allow user to pass their own params
  */
-var extend = function(a, b) {
+var extend = function (a, b) {
   for (var key in b) {
     if (b.hasOwnProperty(key)) {
       a[key] = b[key];
@@ -13,7 +13,7 @@ var extend = function(a, b) {
 /*
  * Convert HEX codes to RGB values (#000000 -> rgb(0,0,0))
  */
-var hexToRgb = function(hex) {
+var hexToRgb = function (hex) {
   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result ? parseInt(result[1], 16) + ', ' + parseInt(result[2], 16) + ', ' + parseInt(result[3], 16) : null;
 };
@@ -21,14 +21,14 @@ var hexToRgb = function(hex) {
 /*
  * Check if the user is using Internet Explorer 8 (for fallbacks)
  */
-var isIE8 = function() {
+var isIE8 = function () {
   return (window.attachEvent && !window.addEventListener);
 };
 
 /*
  * IE compatible logging for developers
  */
-var logStr = function(string) {
+var logStr = function (string) {
   if (window.console) {
     // IE...
     window.console.log('SweetAlert: ' + string);
@@ -36,10 +36,10 @@ var logStr = function(string) {
 };
 
 /*
- * Set hover, active and focus-states for buttons 
+ * Set hover, active and focus-states for buttons
  * (source: http://www.sitepoint.com/javascript-generate-lighter-darker-color)
  */
-var colorLuminance = function(hex, lum) {
+var colorLuminance = function (hex, lum) {
   // Validate hex string
   hex = String(hex).replace(/[^0-9a-f]/gi, '');
   if (hex.length < 6) {
@@ -60,7 +60,6 @@ var colorLuminance = function(hex, lum) {
 
   return rgb;
 };
-
 
 export {
   extend,

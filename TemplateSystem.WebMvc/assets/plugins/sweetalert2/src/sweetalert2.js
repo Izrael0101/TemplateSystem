@@ -276,7 +276,7 @@ const openModal = (animation, onComplete) => {
   // scrolling is 'hidden' until animation is done, after that 'auto'
   container.style.overflowY = 'hidden'
   if (dom.animationEndEvent && !dom.hasClass(modal, swalClasses.noanimation)) {
-    modal.addEventListener(dom.animationEndEvent, function swalCloseEventFinished () {
+    modal.addEventListener(dom.animationEndEvent, function swalCloseEventFinished() {
       modal.removeEventListener(dom.animationEndEvent, swalCloseEventFinished)
       container.style.overflowY = 'auto'
     })
@@ -400,7 +400,7 @@ const sweetAlert = (...args) => {
         if (params.useRejections) {
           reject('timer')
         } else {
-          resolve({dismiss: 'timer'})
+          resolve({ dismiss: 'timer' })
         }
       }, params.timer)
     }
@@ -479,7 +479,7 @@ const sweetAlert = (...args) => {
         if (params.useRejections) {
           resolve(value)
         } else {
-          resolve({value: value})
+          resolve({ value: value })
         }
       }
     }
@@ -552,14 +552,14 @@ const sweetAlert = (...args) => {
               confirm(true)
             }
 
-          // Clicked 'cancel'
+            // Clicked 'cancel'
           } else if (targetedCancel && sweetAlert.isVisible()) {
             sweetAlert.disableButtons()
             sweetAlert.closeModal(params.onClose)
             if (params.useRejections) {
               reject('cancel')
             } else {
-              resolve({dismiss: 'cancel'})
+              resolve({ dismiss: 'cancel' })
             }
           }
           break
@@ -581,7 +581,7 @@ const sweetAlert = (...args) => {
       if (params.useRejections) {
         reject('close')
       } else {
-        resolve({dismiss: 'close'})
+        resolve({ dismiss: 'close' })
       }
     }
 
@@ -595,7 +595,7 @@ const sweetAlert = (...args) => {
         if (params.useRejections) {
           reject('overlay')
         } else {
-          resolve({dismiss: 'overlay'})
+          resolve({ dismiss: 'overlay' })
         }
       }
     }
@@ -622,7 +622,7 @@ const sweetAlert = (...args) => {
         if (index === focusableElements.length) {
           index = 0
 
-        // go to last item
+          // go to last item
         } else if (index === -1) {
           index = focusableElements.length - 1
         }
@@ -667,17 +667,17 @@ const sweetAlert = (...args) => {
         e.stopPropagation()
         e.preventDefault()
 
-      // ARROWS - switch focus between buttons
+        // ARROWS - switch focus between buttons
       } else if (keyCode === 37 || keyCode === 38 || keyCode === 39 || keyCode === 40) {
         // focus Cancel button if Confirm button is currently focused
         if (document.activeElement === confirmButton && dom.isVisible(cancelButton)) {
           cancelButton.focus()
-        // and vice versa
+          // and vice versa
         } else if (document.activeElement === cancelButton && dom.isVisible(confirmButton)) {
           confirmButton.focus()
         }
 
-      // ENTER/SPACE
+        // ENTER/SPACE
       } else if (keyCode === 13 || keyCode === 32) {
         if (btnIndex === -1 && params.allowEnterKey) {
           // ENTER/SPACE clicked outside of a button.
@@ -690,13 +690,13 @@ const sweetAlert = (...args) => {
           e.preventDefault()
         }
 
-      // ESC
+        // ESC
       } else if (keyCode === 27 && params.allowEscapeKey === true) {
         sweetAlert.closeModal(params.onClose)
         if (params.useRejections) {
           reject('esc')
         } else {
-          resolve({dismiss: 'esc'})
+          resolve({ dismiss: 'esc' })
         }
       }
     }
@@ -1022,7 +1022,7 @@ const sweetAlert = (...args) => {
     // Observe changes inside the modal and adjust height
     if (typeof MutationObserver !== 'undefined' && !swal2Observer) {
       swal2Observer = new MutationObserver(sweetAlert.recalculateHeight)
-      swal2Observer.observe(modal, {childList: true, characterData: true, subtree: true})
+      swal2Observer.observe(modal, { childList: true, characterData: true, subtree: true })
     }
   })
 }
@@ -1045,7 +1045,7 @@ sweetAlert.queue = (steps) => {
   }
   let queueResult = []
   return new Promise((resolve, reject) => {
-    (function step (i, callback) {
+    (function step(i, callback) {
       if (i < queue.length) {
         document.body.setAttribute('data-swal2-queue-step', i)
 
@@ -1118,7 +1118,7 @@ sweetAlert.close = sweetAlert.closeModal = (onComplete) => {
 
   // If animation is supported, animate
   if (dom.animationEndEvent && !dom.hasClass(modal, swalClasses.noanimation)) {
-    modal.addEventListener(dom.animationEndEvent, function swalCloseEventFinished () {
+    modal.addEventListener(dom.animationEndEvent, function swalCloseEventFinished() {
       modal.removeEventListener(dom.animationEndEvent, swalCloseEventFinished)
       if (dom.hasClass(modal, swalClasses.hide)) {
         removeModalAndResetState()
@@ -1173,10 +1173,10 @@ sweetAlert.isValidParameter = (paramName) => {
   return defaultParams.hasOwnProperty(paramName) || paramName === 'extraParams'
 }
 
-  /**
- * Set default params for each popup
- * @param {Object} userParams
- */
+/**
+* Set default params for each popup
+* @param {Object} userParams
+*/
 sweetAlert.setDefaults = (userParams) => {
   if (!userParams || typeof userParams !== 'object') {
     return console.error('SweetAlert2: the argument for setDefaults() is required and has to be a object')

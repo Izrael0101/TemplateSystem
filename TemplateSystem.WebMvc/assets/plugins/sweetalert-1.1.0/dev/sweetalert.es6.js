@@ -41,11 +41,9 @@ import {
   fixVerticalPosition
 } from './modules/handle-swal-dom';
 
-
 // Handle button events and keyboard events
 import { handleButton, handleConfirm, handleCancel } from './modules/handle-click';
 import handleKeyDown from './modules/handle-key';
-
 
 // Default values
 import defaultParams from './modules/default-params';
@@ -58,14 +56,13 @@ import setParameters from './modules/set-params';
 var previousWindowKeyDown;
 var lastFocusedButton;
 
-
 /*
  * Global sweetAlert function
  * (this is what the user calls)
  */
 var sweetAlert, swal;
 
-sweetAlert = swal = function() {
+sweetAlert = swal = function () {
   var customizations = arguments[0];
 
   addClass(document.body, 'stop-scrolling');
@@ -78,7 +75,7 @@ sweetAlert = swal = function() {
    */
   function argumentOrDefault(key) {
     var args = customizations;
-    return (args[key] === undefined) ?  defaultParams[key] : args[key];
+    return (args[key] === undefined) ? defaultParams[key] : args[key];
   }
 
   if (customizations === undefined) {
@@ -89,12 +86,11 @@ sweetAlert = swal = function() {
   var params = extend({}, defaultParams);
 
   switch (typeof customizations) {
-
     // Ex: swal("Hello", "Just testing", "info");
     case 'string':
       params.title = customizations;
-      params.text  = arguments[1] || '';
-      params.type  = arguments[2] || '';
+      params.text = arguments[1] || '';
+      params.type = arguments[2] || '';
       break;
 
     // Ex: swal({ title:"Hello", text: "Just testing", type: "info" });
@@ -122,7 +118,6 @@ sweetAlert = swal = function() {
     default:
       logStr('Unexpected type of argument! Expected "string" or "object", got ' + typeof customizations);
       return false;
-
   }
 
   setParameters(params);
@@ -131,7 +126,6 @@ sweetAlert = swal = function() {
 
   // Modal interactions
   var modal = getModal();
-
 
   /*
    * Make sure all modal buttons respond to all events
@@ -166,18 +160,16 @@ sweetAlert = swal = function() {
       }
     }, 0);
   };
-  
+
   // Show alert with enabled buttons always
   swal.enableButtons();
 };
-
-
 
 /*
  * Set default params for each popup
  * @param {Object} userParams
  */
-sweetAlert.setDefaults = swal.setDefaults = function(userParams) {
+sweetAlert.setDefaults = swal.setDefaults = function (userParams) {
   if (!userParams) {
     throw new Error('userParams is required');
   }
@@ -188,11 +180,10 @@ sweetAlert.setDefaults = swal.setDefaults = function(userParams) {
   extend(defaultParams, userParams);
 };
 
-
 /*
  * Animation when closing modal
  */
-sweetAlert.close = swal.close = function() {
+sweetAlert.close = swal.close = function () {
   var modal = getModal();
 
   fadeOut(getOverlay(), 5);
@@ -219,7 +210,7 @@ sweetAlert.close = swal.close = function() {
   removeClass($warningIcon.querySelector('.sa-dot'), 'pulseWarningIns');
 
   // Reset custom class (delay so that UI changes aren't visible)
-  setTimeout(function() {
+  setTimeout(function () {
     var customClass = modal.getAttribute('data-custom-class');
     removeClass(modal, customClass);
   }, 300);
@@ -238,12 +229,11 @@ sweetAlert.close = swal.close = function() {
   return true;
 };
 
-
 /*
  * Validation of the input field is done by user
  * If something is wrong => call showInputError with errorMessage
  */
-sweetAlert.showInputError = swal.showInputError = function(errorMessage) {
+sweetAlert.showInputError = swal.showInputError = function (errorMessage) {
   var modal = getModal();
 
   var $errorIcon = modal.querySelector('.sa-input-error');
@@ -254,18 +244,17 @@ sweetAlert.showInputError = swal.showInputError = function(errorMessage) {
 
   $errorContainer.querySelector('p').innerHTML = errorMessage;
 
-  setTimeout(function() {
+  setTimeout(function () {
     sweetAlert.enableButtons();
   }, 1);
 
   modal.querySelector('input').focus();
 };
 
-
 /*
  * Reset input error DOM elements
  */
-sweetAlert.resetInputError = swal.resetInputError = function(event) {
+sweetAlert.resetInputError = swal.resetInputError = function (event) {
   // If press enter => ignore
   if (event && event.keyCode === 13) {
     return false;
@@ -283,7 +272,7 @@ sweetAlert.resetInputError = swal.resetInputError = function(event) {
 /*
  * Disable confirm and cancel buttons
  */
-sweetAlert.disableButtons = swal.disableButtons = function(event) {
+sweetAlert.disableButtons = swal.disableButtons = function (event) {
   var modal = getModal();
   var $confirmButton = modal.querySelector('button.confirm');
   var $cancelButton = modal.querySelector('button.cancel');
@@ -294,7 +283,7 @@ sweetAlert.disableButtons = swal.disableButtons = function(event) {
 /*
  * Enable confirm and cancel buttons
  */
-sweetAlert.enableButtons = swal.enableButtons = function(event) {
+sweetAlert.enableButtons = swal.enableButtons = function (event) {
   var modal = getModal();
   var $confirmButton = modal.querySelector('button.confirm');
   var $cancelButton = modal.querySelector('button.cancel');

@@ -33,7 +33,6 @@ namespace TemplateSystem.WebApi.Filters
 
             if (principal == null)
                 context.ErrorResult = new AuthenticationFailureResult("Invalid token", request);
-
             else
                 context.Principal = principal;
         }

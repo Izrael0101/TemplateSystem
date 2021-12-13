@@ -1,11 +1,11 @@
-/*   
+/*
 Template Name: Color Admin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 1.6.0
 Author: Sean Ngu
 Website: http://www.seantheme.com/color-admin-v1.6/admin/
 */
 
-var handleEmailActionButtonStatus = function() {
+var handleEmailActionButtonStatus = function () {
     if ($('[data-checked=email-checkbox]:checked').length !== 0) {
         $('[data-email-action]').removeClass('hide');
     } else {
@@ -13,8 +13,8 @@ var handleEmailActionButtonStatus = function() {
     }
 };
 
-var handleEmailCheckboxChecked = function() {
-    $('[data-checked=email-checkbox]').live('click', function() {
+var handleEmailCheckboxChecked = function () {
+    $('[data-checked=email-checkbox]').live('click', function () {
         var targetLabel = $(this).closest('label');
         var targetEmailList = $(this).closest('li');
         if ($(this).prop('checked')) {
@@ -28,11 +28,11 @@ var handleEmailCheckboxChecked = function() {
     });
 };
 
-var handleEmailAction = function() {
-    $('[data-email-action]').live('click', function() {
+var handleEmailAction = function () {
+    $('[data-email-action]').live('click', function () {
         var targetEmailList = '[data-checked=email-checkbox]:checked';
         if ($(targetEmailList).length !== 0) {
-            $(targetEmailList).closest('li').slideToggle(function() {
+            $(targetEmailList).closest('li').slideToggle(function () {
                 $(this).remove();
                 handleEmailActionButtonStatus();
             });
@@ -41,7 +41,7 @@ var handleEmailAction = function() {
 };
 
 var InboxV2 = function () {
-	"use strict";
+    "use strict";
     return {
         //main function
         init: function () {

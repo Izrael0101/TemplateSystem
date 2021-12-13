@@ -1,11 +1,11 @@
-/*   
+/*
 Template Name: Color Admin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 1.6.0
 Author: Sean Ngu
 Website: http://www.seantheme.com/color-admin-v1.6/admin/
 */
 
-var handleDatepicker = function() {
+var handleDatepicker = function () {
     $('#datepicker-default').datepicker({
         todayHighlight: true
     });
@@ -24,7 +24,7 @@ var handleDatepicker = function() {
     });
 };
 
-var handleIonRangeSlider = function() {
+var handleIonRangeSlider = function () {
     $('#default_rangeSlider').ionRangeSlider({
         min: 0,
         max: 5000,
@@ -56,7 +56,7 @@ var handleIonRangeSlider = function() {
     });
 };
 
-var handleFormMaskedInput = function() {
+var handleFormMaskedInput = function () {
     "use strict";
     $("#masked-input-date").mask("99/99/9999");
     $("#masked-input-phone").mask("(999) 999-9999");
@@ -68,8 +68,8 @@ var handleFormMaskedInput = function() {
 
 var handleFormColorPicker = function () {
     "use strict";
-    $('#colorpicker').colorpicker({format: 'hex'});
-    $('#colorpicker-prepend').colorpicker({format: 'hex'});
+    $('#colorpicker').colorpicker({ format: 'hex' });
+    $('#colorpicker-prepend').colorpicker({ format: 'hex' });
     $('#colorpicker-rgba').colorpicker();
 };
 
@@ -78,13 +78,13 @@ var handleFormTimePicker = function () {
     $('#timepicker').timepicker();
 };
 
-var handleFormPasswordIndicator = function() {
+var handleFormPasswordIndicator = function () {
     "use strict";
     $('#password-indicator-default').passwordStrength();
-    $('#password-indicator-visible').passwordStrength({targetDiv: '#passwordStrengthDiv2'});
+    $('#password-indicator-visible').passwordStrength({ targetDiv: '#passwordStrengthDiv2' });
 };
 
-var handleJqueryAutocomplete = function() {
+var handleJqueryAutocomplete = function () {
     var availableTags = [
         'ActionScript',
         'AppleScript',
@@ -114,24 +114,24 @@ var handleJqueryAutocomplete = function() {
     });
 };
 
-var handleBootstrapCombobox = function() {
+var handleBootstrapCombobox = function () {
     $('.combobox').combobox();
 };
 
-var handleTagsInput = function() {
-    $('.bootstrap-tagsinput input').focus(function() {
+var handleTagsInput = function () {
+    $('.bootstrap-tagsinput input').focus(function () {
         $(this).closest('.bootstrap-tagsinput').addClass('bootstrap-tagsinput-focus');
     });
-    $('.bootstrap-tagsinput input').focusout(function() {
+    $('.bootstrap-tagsinput input').focusout(function () {
         $(this).closest('.bootstrap-tagsinput').removeClass('bootstrap-tagsinput-focus');
     });
 };
 
-var handleSelectpicker = function() {
+var handleSelectpicker = function () {
     $('.selectpicker').selectpicker('render');
 };
 
-var handleJqueryTagIt = function() {
+var handleJqueryTagIt = function () {
     $('#jquery-tagIt-default').tagit({
         availableTags: ["c++", "java", "php", "javascript", "ruby", "python", "c"]
     });
@@ -159,21 +159,21 @@ var handleJqueryTagIt = function() {
 };
 
 var FormPlugins = function () {
-	"use strict";
+    "use strict";
     return {
         //main function
         init: function () {
-			handleDatepicker();
-			handleIonRangeSlider();
-			handleFormMaskedInput();
-			handleFormColorPicker();
-			handleFormTimePicker();
-			handleFormPasswordIndicator();
-			handleJqueryAutocomplete();
-			handleBootstrapCombobox();
-			handleSelectpicker();
-			handleTagsInput();
-			handleJqueryTagIt();
+            handleDatepicker();
+            handleIonRangeSlider();
+            handleFormMaskedInput();
+            handleFormColorPicker();
+            handleFormTimePicker();
+            handleFormPasswordIndicator();
+            handleJqueryAutocomplete();
+            handleBootstrapCombobox();
+            handleSelectpicker();
+            handleTagsInput();
+            handleJqueryTagIt();
         }
     };
 }();

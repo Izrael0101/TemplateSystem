@@ -1,8 +1,8 @@
-﻿using TemplateSystem.Repository;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using TemplateSystem.Entity.Models;
+using TemplateSystem.Repository;
 
 namespace TemplateSystem.Services
 {
@@ -15,44 +15,36 @@ namespace TemplateSystem.Services
         //}
         public StudentService()
         {
-            _StudentRepository =  new StudentRepository();
-           
+            _StudentRepository = new StudentRepository();
         }
 
         public async Task<List<Student>> GetAllStarsAsync()
         {
-
             return await _StudentRepository.GetStudentAsync();
         }
 
         public async Task<Student> GetStudentriptionByIdAsync(int? id)
         {
-           
             return await _StudentRepository.GetStudentByIdAsync(id);
         }
 
         public async Task AddStarAsync(Student stardesc)
         {
-
             await _StudentRepository.CreateStarAsync(stardesc);
         }
 
         public async Task DeleteStarAsync(int? id)
         {
-
             await _StudentRepository.DeleteStarAsync(id);
         }
 
         public async Task EditStudentAsync(Student stardesc)
         {
-
-             await _StudentRepository.EditStudentAsync(stardesc);
+            await _StudentRepository.EditStudentAsync(stardesc);
         }
 
-       
-
-
         #region IDisposable Support
+
         private bool disposedValue = false; // To detect redundant calls
 
         protected virtual void Dispose(bool disposing)
@@ -74,8 +66,7 @@ namespace TemplateSystem.Services
             Dispose(true);
             GC.SuppressFinalize(this);
         }
-        #endregion
 
-
+        #endregion IDisposable Support
     }
 }

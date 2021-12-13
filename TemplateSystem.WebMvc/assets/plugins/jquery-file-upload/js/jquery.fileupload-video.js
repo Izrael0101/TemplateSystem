@@ -12,7 +12,7 @@
 /* jshint nomen:false */
 /* global define, require, window, document */
 
-;(function (factory) {
+; (function (factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
         // Register as an anonymous AMD module:
@@ -57,7 +57,6 @@
     // The File Upload Video Preview plugin extends the fileupload widget
     // with video preview functionality:
     $.widget('blueimp.fileupload', $.blueimp.fileupload, {
-
         options: {
             // The regular expression for the types of video files to load,
             // matched against the file type:
@@ -67,7 +66,6 @@
         _videoElement: document.createElement('video'),
 
         processActions: {
-
             // Loads the video file given via data.files and data.index
             // as video element if the browser supports playing it.
             // Accepts the options fileTypes (regular expression)
@@ -80,11 +78,11 @@
                     url,
                     video;
                 if (this._videoElement.canPlayType &&
-                        this._videoElement.canPlayType(file.type) &&
-                        ($.type(options.maxFileSize) !== 'number' ||
-                            file.size <= options.maxFileSize) &&
-                        (!options.fileTypes ||
-                            options.fileTypes.test(file.type))) {
+                    this._videoElement.canPlayType(file.type) &&
+                    ($.type(options.maxFileSize) !== 'number' ||
+                        file.size <= options.maxFileSize) &&
+                    (!options.fileTypes ||
+                        options.fileTypes.test(file.type))) {
                     url = loadImage.createObjectURL(file);
                     if (url) {
                         video = this._videoElement.cloneNode(false);
@@ -104,9 +102,6 @@
                 }
                 return data;
             }
-
         }
-
     });
-
 }));

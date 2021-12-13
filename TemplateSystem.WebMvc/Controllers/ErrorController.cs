@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace TemplateSystem.WebMvc.Controllers
 {
@@ -10,15 +6,13 @@ namespace TemplateSystem.WebMvc.Controllers
     {
         // GET: Error
         public ActionResult Index()
-        {         
+        {
             return View();
         }
-
 
         public ActionResult HttpError404()
         {
             return View();
         }
-
     }
 }

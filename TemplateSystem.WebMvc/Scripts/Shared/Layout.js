@@ -1,5 +1,4 @@
 ﻿function Salir() {
-
     var ocredential = new Object();
 
     ocredential.UserName = '';
@@ -19,12 +18,9 @@
         cache: false
     });
 
-
     //Este llamado al controlador de Account es para matar las sessiones del usuario y las opciones del menu
     var url = config.contextPath + 'Account/LogOut';
     $.post(url, {}, function (data) { location.href = url; });
-
-
 }
 
 $(document).ready(function () {
@@ -55,12 +51,6 @@ $(document).ready(function () {
             if (willClose) {
                 Salir();
             }
-            
         });
     });
-
-
-   
-
-
 });

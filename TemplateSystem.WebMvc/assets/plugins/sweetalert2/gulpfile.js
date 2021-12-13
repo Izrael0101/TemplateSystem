@@ -39,7 +39,7 @@ gulp.task('sass', ['sass-lint'], () => {
     .pipe(autoprefix())
     .pipe(gulp.dest('dist'))
     .pipe(cleanCSS())
-    .pipe(rename({extname: '.min.css'}))
+    .pipe(rename({ extname: '.min.css' }))
     .pipe(gulp.dest('dist'))
 
   gulp.src('assets/example.scss')

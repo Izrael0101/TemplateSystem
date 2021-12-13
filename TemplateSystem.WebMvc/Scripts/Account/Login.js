@@ -1,15 +1,11 @@
-﻿
-$(document).ready(function () {
-
-
-    $("#btnLogin").click(function (e) {    
-            //$("#frmLogin").submit()
-            Log();         
+﻿$(document).ready(function () {
+    $("#btnLogin").click(function (e) {
+        //$("#frmLogin").submit()
+        Log();
     });
 
-
     $("#Password").keypress(function (e) {
-        if (e.which == 13) {       
+        if (e.which == 13) {
             //$("#frmLogin").submit()
             Log();
         }
@@ -18,13 +14,9 @@ $(document).ready(function () {
     $(".modal-dialog").draggable({
         handle: ".modal-header"
     });
-
-
-
 });
 
 function Log() {
-
     var domain;
 
     domain = document.domain;
@@ -48,28 +40,22 @@ function Log() {
     else {
         Alerta('Warning', 'Advertencia', "Es necesario llenar los campos solicitados")
     }
-
-    
-
 }
 
 function logInAccess(ocredential) {
-
     $.ajax({
         url: config.contextPath + "Account/LogInAccess",
         type: "POST",
         contentType: "application/json;charset=utf-8",
-        dataType: "json",       
+        dataType: "json",
         //data: JSON.stringify(ocredential),
         success: function (Result) {
             if (Result.Result == 'OK') {
-               
                 Alerta('Success', 'Acceso', 'Acceso correcto !!!!')
                 //getcustomresource(Result.SystemId, Result.UserId);
                 setTimeout(function () {
                     location.href = Result.url;
                 }, 800);
-
             } else {
                 if (Result.ChagePass == '1') {
                     Alerta('Info', 'Aviso', Result.Message)
@@ -85,10 +71,9 @@ function logInAccess(ocredential) {
     });
 }
 
-
 function Alerta(Type, Titulo, Cuerpo) {
     switch (Type) {
-        case "Primary":          
+        case "Primary":
             swal({
                 title: Titulo,
                 text: Cuerpo,
@@ -96,9 +81,8 @@ function Alerta(Type, Titulo, Cuerpo) {
                 showCancelButton: false,
                 closeOnConfirm: false,
                 buttons: {
-
                 }
-            });  
+            });
             break;
 
         case "Success":
@@ -109,9 +93,8 @@ function Alerta(Type, Titulo, Cuerpo) {
                 showCancelButton: false,
                 closeOnConfirm: false,
                 buttons: {
-                   
                 }
-            });            
+            });
             break;
 
         case "Info":
@@ -122,9 +105,8 @@ function Alerta(Type, Titulo, Cuerpo) {
                 showCancelButton: false,
                 closeOnConfirm: false,
                 buttons: {
-
                 }
-            }); 
+            });
             break;
 
         case "Danger":
@@ -135,9 +117,8 @@ function Alerta(Type, Titulo, Cuerpo) {
                 showCancelButton: false,
                 closeOnConfirm: false,
                 buttons: {
-
                 }
-            }); 
+            });
             break;
 
         case "Warning":
@@ -148,7 +129,6 @@ function Alerta(Type, Titulo, Cuerpo) {
                 showCancelButton: false,
                 closeOnConfirm: false,
                 buttons: {
-
                 }
             });
             break;

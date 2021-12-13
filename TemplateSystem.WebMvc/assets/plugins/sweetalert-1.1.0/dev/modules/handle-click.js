@@ -2,26 +2,25 @@ import { colorLuminance } from './utils';
 import { getModal } from './handle-swal-dom';
 import { hasClass, isDescendant } from './handle-dom';
 
-
 /*
  * User clicked on "Confirm"/"OK" or "Cancel"
  */
-var handleButton = function(event, params, modal) {
+var handleButton = function (event, params, modal) {
   var e = event || window.event;
   var target = e.target || e.srcElement;
 
   var targetedConfirm = target.className.indexOf('confirm') !== -1;
   var targetedOverlay = target.className.indexOf('sweet-overlay') !== -1;
-  var modalIsVisible  = hasClass(modal, 'visible');
+  var modalIsVisible = hasClass(modal, 'visible');
   var doneFunctionExists = (params.doneFunction && modal.getAttribute('data-has-done-function') === 'true');
 
   // Since the user can change the background-color of the confirm button programmatically,
   // we must calculate what the color should be on hover/active
   var normalColor, hoverColor, activeColor;
   if (targetedConfirm && params.confirmButtonColor) {
-    normalColor  = params.confirmButtonColor;
-    hoverColor   = colorLuminance(normalColor, -0.04);
-    activeColor  = colorLuminance(normalColor, -0.14);
+    normalColor = params.confirmButtonColor;
+    hoverColor = colorLuminance(normalColor, -0.04);
+    activeColor = colorLuminance(normalColor, -0.14);
   }
 
   function shouldSetConfirmButtonColor(color) {
@@ -49,7 +48,7 @@ var handleButton = function(event, params, modal) {
 
     case 'focus':
       let $confirmButton = modal.querySelector('button.confirm');
-      let $cancelButton  = modal.querySelector('button.cancel');
+      let $cancelButton = modal.querySelector('button.cancel');
 
       if (targetedConfirm) {
         $cancelButton.style.boxShadow = 'none';
@@ -81,7 +80,7 @@ var handleButton = function(event, params, modal) {
 /*
  *  User clicked on "Confirm"/"OK"
  */
-var handleConfirm = function(modal, params) {
+var handleConfirm = function (modal, params) {
   var callbackValue = true;
 
   if (hasClass(modal, 'show-input')) {
@@ -106,7 +105,7 @@ var handleConfirm = function(modal, params) {
 /*
  *  User clicked on "Cancel"
  */
-var handleCancel = function(modal, params) {
+var handleCancel = function (modal, params) {
   // Check if callback function expects a parameter (to track cancel actions)
   var functionAsStr = String(params.doneFunction).replace(/\s/g, '');
   var functionHandlesCancel = functionAsStr.substring(0, 9) === 'function(' && functionAsStr.substring(9, 10) !== ')';
@@ -119,7 +118,6 @@ var handleCancel = function(modal, params) {
     sweetAlert.close();
   }
 };
-
 
 export default {
   handleButton,

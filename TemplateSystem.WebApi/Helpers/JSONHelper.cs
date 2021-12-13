@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Script.Serialization;
 
 namespace TemplateSystem.WebApi.Helpers
@@ -9,6 +6,7 @@ namespace TemplateSystem.WebApi.Helpers
     public static class JSONHelper
     {
         #region Public extension methods.
+
         /// <summary>
         /// Extened method of object class
         /// Converts an object to a json string.
@@ -27,6 +25,7 @@ namespace TemplateSystem.WebApi.Helpers
                 return "";
             }
         }
-        #endregion
+
+        #endregion Public extension methods.
     }
 }

@@ -4,26 +4,26 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    
+
     & i {
         display: block;
         width: 14px;
         text-align: center;
     }
-    
+
     & > li {
         border-bottom: 1px solid #ddd;
     }
-    
+
     & > li > a {
         display: block;
         color: #333;
-        
+
         &:hover,
         &:focus {
             background: #fafafa;
             text-decoration: none;
-            
+
             .todolist-input i:before {
                 content: '\f14a';
                 color: @black;
@@ -31,7 +31,7 @@
             }
         }
     }
-    
+
     & > li.active > a {
         &.todolist-input i:before,
         &:hover .todolist-input i:before,
@@ -40,21 +40,22 @@
             color: #00acac;
             .opacity(1.0);
         }
+
         & .todolist-title {
             text-decoration: line-through;
         }
     }
-    
+
     & .todolist-input,
     & .todolist-title {
         display: table-cell;
         padding: 10px;
     }
-    
+
     & .todolist-title {
         padding-right: 15px;
     }
-    
+
     & .todolist-input {
         text-align: center;
         font-size: 14px;

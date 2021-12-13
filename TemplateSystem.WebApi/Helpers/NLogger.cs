@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
-using System.Web;
 using System.Web.Http.Tracing;
 using TemplateSystem.WebApi.ErrorHelper;
 
@@ -13,12 +12,15 @@ namespace TemplateSystem.WebApi.Helpers
     public class NLogger : ITraceWriter
     {
         #region Private member variables.
+
         private static readonly Logger ClassLogger = LogManager.GetCurrentClassLogger();
 
         private static readonly Lazy<Dictionary<TraceLevel, Action<string>>> LoggingMap = new Lazy<Dictionary<TraceLevel, Action<string>>>(() => new Dictionary<TraceLevel, Action<string>> { { TraceLevel.Info, ClassLogger.Info }, { TraceLevel.Debug, ClassLogger.Debug }, { TraceLevel.Error, ClassLogger.Error }, { TraceLevel.Fatal, ClassLogger.Fatal }, { TraceLevel.Warn, ClassLogger.Warn } });
-        #endregion
+
+        #endregion Private member variables.
 
         #region Private properties.
+
         /// <summary>
         /// Get property for Logger
         /// </summary>
@@ -26,9 +28,11 @@ namespace TemplateSystem.WebApi.Helpers
         {
             get { return LoggingMap.Value; }
         }
-        #endregion
+
+        #endregion Private properties.
 
         #region Public member methods.
+
         /// <summary>
         /// Implementation of TraceWriter to trace the logs.
         /// </summary>
@@ -49,9 +53,11 @@ namespace TemplateSystem.WebApi.Helpers
                 Log(record);
             }
         }
-        #endregion
+
+        #endregion Public member methods.
 
         #region Private member methods.
+
         /// <summary>
         /// Logs info/Error to Log file
         /// </summary>
@@ -93,13 +99,14 @@ namespace TemplateSystem.WebApi.Helpers
                         message.Append("").Append("Error: " + exception.ErrorDescription + Environment.NewLine);
                         message.Append("").Append("Error Code: " + exception.ErrorCode + Environment.NewLine);
                     }
-                }               
+                }
                 else
                     message.Append("").Append("Error: " + record.Exception.GetBaseException().Message + Environment.NewLine);
             }
 
             Logger[record.Level](Convert.ToString(message) + Environment.NewLine);
         }
-        #endregion
+
+        #endregion Private member methods.
     }
 }

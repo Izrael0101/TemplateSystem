@@ -1,10 +1,9 @@
 // Google Theme for SweetAlert
 // By Tristan Edwards
 
-.sweet-overlay {  
+.sweet-overlay {
   background: rgba(10,10,10,.6);
 }
-
 
 .sweet-alert {
   $header-height: 40px;
@@ -56,6 +55,7 @@
     padding: 8px 16px;
     position: relative;
     margin-top: 0;
+
     &:hover, &:focus {
       background-color: #f6f6f6 !important;
     }
@@ -63,8 +63,10 @@
     &.confirm {
       color: #3c80f6;
     }
+
     &.cancel {
       color: #757575;
+
       &:focus {
         box-shadow: none !important;
       }
@@ -89,6 +91,7 @@
     box-shadow: none;
     font-size: 13px;
     margin: 10px 0;
+
     &:focus {
       border: none;
       border-bottom: 1px solid #3c80f6;
@@ -98,6 +101,7 @@
 
   fieldset {
     padding: 0;
+
     .sa-input-error {
       display: none;
     }
@@ -110,9 +114,11 @@
     padding: 0 $padding;
     margin: 0 -20px;
     text-align: left;
+
     &.show {
       padding: 0 $padding;
       display: block;
+
       ~ fieldset input {
         background: red;
         border-bottom: 1px solid $error-color;
@@ -123,6 +129,7 @@
     .icon {
       display: none;
     }
+
     p {
       color: $error-color;
       margin-top: 0;
@@ -130,19 +137,28 @@
   }
 }
 
-
 // Animations
 
 @mixin keyframes($animation-name) {
   @-webkit-keyframes #{$animation-name} {
     @content;
   }
+
   @keyframes #{$animation-name} {
     @content;
   }
 }
 
 @include keyframes(animateErrorIcon) {
-  0%    { transform: rotateX(100deg), scale(0.5); -webkit-transform: rotateX(100deg), scale(0.5); opacity: 0; }
-  100%  { transform: rotateX(0deg),   scale(0.5); -webkit-transform: rotateX(0deg),   scale(0.5); opacity: 1; }
+  0% {
+    transform: rotateX(100deg), scale(0.5);
+    -webkit-transform: rotateX(100deg), scale(0.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotateX(0deg), scale(0.5);
+    -webkit-transform: rotateX(0deg), scale(0.5);
+    opacity: 1;
+  }
 }

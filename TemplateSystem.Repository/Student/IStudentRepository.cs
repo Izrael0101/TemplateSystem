@@ -18,12 +18,16 @@ namespace TemplateSystem.Repository
     ///         You could for instance name a method <code>GetUsersForIndexPage</code>.
     ///     </para>
     /// </remarks>
-    public interface IStudentRepository: IDisposable
+    public interface IStudentRepository : IDisposable
     {
         Task<List<Student>> GetStudentAsync();
+
         Task<Student> GetStudentByIdAsync(int? id);
+
         Task CreateStarAsync(Student stardesc);
+
         Task DeleteStarAsync(int? id);
+
         Task EditStudentAsync(Student stardesc);
     }
 }

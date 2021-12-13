@@ -1,4 +1,4 @@
-/*   
+/*
 Template Name: Color Admin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 1.6.0
 Author: Sean Ngu
@@ -41,27 +41,26 @@ var strokePurple = 'rgba(114, 124, 182, 0.8)';
 var highlightFillPurple = 'rgba(114, 124, 182, 0.8)';
 var highlightStrokePurple = 'rgba(114, 124, 182, 1)';
 
-
-var randomScalingFactor = function() { 
-    return Math.round(Math.random()*100)
+var randomScalingFactor = function () {
+    return Math.round(Math.random() * 100)
 };
 
 var barChartData = {
-    labels : ['January','February','March','April','May','June','July'],
-    datasets : [
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [
         {
-            fillColor : fillBlackLight,
-            strokeColor : strokeBlack,
+            fillColor: fillBlackLight,
+            strokeColor: strokeBlack,
             highlightFill: highlightFillBlack,
             highlightStroke: highlightStrokeBlack,
-            data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
         },
         {
-            fillColor : fillBlueLight,
-            strokeColor : strokeBlue,
+            fillColor: fillBlueLight,
+            strokeColor: strokeBlue,
             highlightFill: highlightFillBlue,
             highlightStroke: highlightStrokeBlue,
-            data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
         }
     ]
 };
@@ -100,27 +99,27 @@ var doughnutData = [
 ];
 
 var lineChartData = {
-    labels : ['January','February','March','April','May','June','July'],
-    datasets : [
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [
         {
             label: 'My First dataset',
-            fillColor : fillBlackLight,
-            strokeColor : strokeBlack,
-            pointColor : strokeBlack,
-            pointStrokeColor : white,
-            pointHighlightFill : white,
-            pointHighlightStroke : strokeBlack,
-            data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            fillColor: fillBlackLight,
+            strokeColor: strokeBlack,
+            pointColor: strokeBlack,
+            pointStrokeColor: white,
+            pointHighlightFill: white,
+            pointHighlightStroke: strokeBlack,
+            data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
         },
         {
             label: 'My Second dataset',
-            fillColor : 'rgba(52,143,226,0.2)',
-            strokeColor : 'rgba(52,143,226,1)',
-            pointColor : 'rgba(52,143,226,1)',
-            pointStrokeColor : '#fff',
-            pointHighlightFill : '#fff',
-            pointHighlightStroke : 'rgba(52,143,226,1)',
-            data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            fillColor: 'rgba(52,143,226,0.2)',
+            strokeColor: 'rgba(52,143,226,1)',
+            pointColor: 'rgba(52,143,226,1)',
+            pointStrokeColor: '#fff',
+            pointHighlightFill: '#fff',
+            pointHighlightStroke: 'rgba(52,143,226,1)',
+            data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
         }
     ]
 };
@@ -202,7 +201,7 @@ var radarChartData = {
             pointStrokeColor: '#fff',
             pointHighlightFill: '#fff',
             pointHighlightStroke: 'rgba(45,53,60,1)',
-            data: [65,59,90,81,56,55,40]
+            data: [65, 59, 90, 81, 56, 55, 40]
         },
         {
             label: 'My Second dataset',
@@ -212,11 +211,10 @@ var radarChartData = {
             pointStrokeColor: '#fff',
             pointHighlightFill: '#fff',
             pointHighlightStroke: 'rgba(52,143,226,1)',
-            data: [28,48,40,19,96,27,100]
+            data: [28, 48, 40, 19, 96, 27, 100]
         }
     ]
 };
-
 
 Chart.defaults.global = {
     animation: true,
@@ -258,57 +256,56 @@ Chart.defaults.global = {
     tooltipXOffset: 10,
     tooltipTemplate: '<%if (label){%><%=label%>: <%}%><%= value %>',
     multiTooltipTemplate: '<%= value %>',
-    onAnimationProgress: function(){},
-    onAnimationComplete: function(){}
+    onAnimationProgress: function () { },
+    onAnimationComplete: function () { }
 }
 
-var handleGenerateGraph = function(animationOption) {
+var handleGenerateGraph = function (animationOption) {
     var animationOption = (animationOption) ? animationOption : false;
-    
+
     var ctx = document.getElementById('line-chart').getContext('2d');
     var lineChart = new Chart(ctx).Line(lineChartData, {
         animation: animationOption
     });
-    
+
     var ctx2 = document.getElementById('bar-chart').getContext('2d');
     var barChart = new Chart(ctx2).Bar(barChartData, {
         animation: animationOption
     });
-    
+
     var ctx3 = document.getElementById('radar-chart').getContext('2d');
     var radarChart = new Chart(ctx3).Radar(radarChartData, {
         animation: animationOption
     });
-    
+
     var ctx4 = document.getElementById('polar-area-chart').getContext('2d');
     var polarAreaChart = new Chart(ctx4).PolarArea(polarData, {
         animation: animationOption
     });
-    
+
     var ctx5 = document.getElementById('pie-chart').getContext('2d');
     window.myPie = new Chart(ctx5).Pie(pieData, {
         animation: animationOption
     });
-    
+
     var ctx6 = document.getElementById('doughnut-chart').getContext('2d');
     window.myDoughnut = new Chart(ctx6).Doughnut(doughnutData, {
         animation: animationOption
     });
 };
 
-
-var handleChartJs = function() {
-    $(window).load(function() {
+var handleChartJs = function () {
+    $(window).load(function () {
         handleGenerateGraph(true);
     });
-    
-    $(window).resize( function() {
+
+    $(window).resize(function () {
         handleGenerateGraph();
     });
 };
 
 var ChartJs = function () {
-	"use strict";
+    "use strict";
     return {
         //main function
         init: function () {

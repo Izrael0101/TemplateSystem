@@ -165,7 +165,6 @@ jasmine.Fixtures.prototype.proxyCallTo_ = function(methodName, passedArguments) 
   return this[methodName].apply(this, passedArguments)
 }
 
-
 jasmine.StyleFixtures = function() {
   this.fixturesCache_ = {}
   this.fixturesNodes_ = []
@@ -425,7 +424,6 @@ jasmine.JQuery.matchersClass = {}
     },
 
     toHandle: function(event) {
-
       var events = $._data(this.actual.get(0), "events")
 
       if(!events || !event || typeof event !== "string") {
@@ -549,4 +547,3 @@ afterEach(function() {
   jasmine.getStyleFixtures().cleanUp()
   jasmine.JQuery.events.cleanUp()
 })
-

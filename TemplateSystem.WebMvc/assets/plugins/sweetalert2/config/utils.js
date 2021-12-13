@@ -33,22 +33,21 @@ const packageRollup = (options) => {
       })
     ]
   })
-  .then((bundle) => {
-    bundle.generate({
-      format: options.format,
-      banner: banner,
-      name: classify(pack.name),
-      footer: `if (window.${moduleId}) window.sweetAlert = window.swal = window.${moduleId};`
+    .then((bundle) => {
+      bundle.generate({
+        format: options.format,
+        banner: banner,
+        name: classify(pack.name),
+        footer: `if (window.${moduleId}) window.sweetAlert = window.swal = window.${moduleId};`
+      })
+        .then((result) => {
+          var code = result.code.replace(/sweetAlert\.version = '(.*)'/, "sweetAlert.version = '" + pack.version + "'")
+          if (options.minify) {
+            code = uglify.minify(code).code
+          }
+          return write(options.dest, code)
+        })
     })
-    .then((result) => {
-      var code = result.code.replace(/sweetAlert\.version = '(.*)'/, "sweetAlert.version = '" + pack.version + "'")
-      if (options.minify) {
-        code = uglify.minify(code).code
-      }
-      return write(options.dest, code)
-    })
-
-  })
 }
 
 module.exports = {

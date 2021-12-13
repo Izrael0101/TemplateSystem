@@ -1,6 +1,5 @@
 ﻿@model TemplateSystem.Entity.Models.Login
 
-
 @{
     Layout = null;
     ViewBag.SystemName = System.Web.Configuration.WebConfigurationManager.AppSettings["SystemName"].ToString();
@@ -44,7 +43,6 @@
             contextPath: '@Url.Content("~")'
         }
     </script>
-
 </head>
 <body class="pace-top bg-white">
     <!-- begin #page-loader -->
@@ -119,7 +117,6 @@
             <!-- end right-container -->
         </div>
         <!-- end login -->
-
     </div>
     <!-- end page container -->
     <!-- ================== BEGIN BASE JS ================== -->
@@ -153,6 +150,5 @@
     </script>
 
     <script src="@Url.Content("~/Scripts/Account/Login.js")" type="text/javascript"></script>
-
 </body>
 </html>

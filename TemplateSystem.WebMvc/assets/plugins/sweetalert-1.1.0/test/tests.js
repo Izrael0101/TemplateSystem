@@ -1,44 +1,44 @@
 QUnit.config.reorder = false;
 
 // swal() sould add the modal to the DOM + make it visible
-test("modal shows up", function() {
+test("modal shows up", function () {
   equal($('.sweet-alert').length, 0);
 
   swal("Hello world!");
-  
+
   ok($('.sweet-alert').is(':visible'));
 });
 
 // Clicking the confirm-button should dismiss the modal
-test("dismiss modal with confirm-button", function(assert) {
+test("dismiss modal with confirm-button", function (assert) {
   var done = assert.async();
   swal("Dismiss me");
 
   var $modal = $('.sweet-alert');
   $modal.find('button.confirm').click();
-  
-  setTimeout(function() {
+
+  setTimeout(function () {
     assert.ok($modal.is(':hidden'));
     done();
   }, 500);
 });
 
-test("dismiss modal with esc-key", function(assert) {
+test("dismiss modal with esc-key", function (assert) {
   var done = assert.async();
   swal("Dismiss me");
 
   var $modal = $('.sweet-alert');
   $(document).trigger($.Event('keydown', {
-    keyCode: 27 
+    keyCode: 27
   }));
 
-  setTimeout(function() {
+  setTimeout(function () {
     assert.ok($modal.is(':hidden'));
     done();
   }, 500);
 });
 
-test("modals stays on with esc-key if allowEscapeKey is false", function(assert) {
+test("modals stays on with esc-key if allowEscapeKey is false", function (assert) {
   var done = assert.async();
   swal({
     title: "Dismiss me",
@@ -47,10 +47,10 @@ test("modals stays on with esc-key if allowEscapeKey is false", function(assert)
 
   var $modal = $('.sweet-alert');
   $(document).trigger($.Event('keydown', {
-    keyCode: 27 
+    keyCode: 27
   }));
 
-  setTimeout(function() {
+  setTimeout(function () {
     assert.ok($modal.is(':visible'));
     done();
   }, 500);
@@ -61,58 +61,57 @@ test("modals stays on with esc-key if allowEscapeKey is false", function(assert)
  * - The cancel-button is visible on the modal
  * - Clicking on it dismisses the modal
  */
-test("cancel-button works", function(assert) {
+test("cancel-button works", function (assert) {
   var done = assert.async();
   swal({
     title: "Test",
     showCancelButton: true
   });
-  
+
   var $modal = $('.sweet-alert');
   var $cancelBtn = $modal.find('button.cancel');
   ok($cancelBtn.is(':visible'));
 
   $cancelBtn.click();
 
-  setTimeout(function() {
+  setTimeout(function () {
     assert.ok($modal.is(':hidden'));
     done();
   }, 500);
 });
 
 // Clicking the overlay should not dismiss the modal...
-test("clicking the overlay does not dismiss modal", function(assert) {
+test("clicking the overlay does not dismiss modal", function (assert) {
   var done = assert.async();
   swal("Test");
 
   var $modal = $('.sweet-alert');
   $('.sweet-overlay').click();
 
-  setTimeout(function() {
+  setTimeout(function () {
     assert.ok($modal.is(':visible'));
     done();
   }, 500);
 });
 
-
 // ...except if we pass allowOutsideClick: true
-test("clicking the overlay (with allowOutsideClick option) dismisses modal", function(assert) {
+test("clicking the overlay (with allowOutsideClick option) dismisses modal", function (assert) {
   var done = assert.async();
   swal({
     title: "Test",
-    allowOutsideClick: true 
+    allowOutsideClick: true
   });
 
   var $modal = $('.sweet-alert');
   $('.sweet-overlay').click();
 
-  setTimeout(function() {
+  setTimeout(function () {
     assert.ok($modal.is(':hidden'));
     done();
   }, 500);
 });
 
-test("timer works", function(assert) {
+test("timer works", function (assert) {
   var done = assert.async();
   swal({
     title: "Timer test",
@@ -123,13 +122,13 @@ test("timer works", function(assert) {
   var $modal = $('.sweet-alert');
   assert.ok($modal.find('button.cancel, button.confirm').is(':hidden'));
 
-  setTimeout(function() {
+  setTimeout(function () {
     assert.ok($modal.is(':hidden'));
     done();
   }, 1000);
 });
 
-test("prompt functionality works", function() {
+test("prompt functionality works", function () {
   swal({
     title: "Prompt test",
     type: "input",

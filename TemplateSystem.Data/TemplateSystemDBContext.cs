@@ -11,18 +11,17 @@ namespace TemplateSystem.Data.Models
             Database.SetInitializer<TemplateSystemDBContext>(null);
         }
 
-        public TemplateSystemDBContext(): base("Name=TemplateSystemDBContext")
+        public TemplateSystemDBContext() : base("Name=TemplateSystemDBContext")
         {
             // the terrible hack
             var ensureDLLIsCopied = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
         }
-       
+
         public DbSet<Student> Student { get; set; }
-     
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {           
-            modelBuilder.Configurations.Add(new StudentMap());          
+        {
+            modelBuilder.Configurations.Add(new StudentMap());
         }
     }
 }

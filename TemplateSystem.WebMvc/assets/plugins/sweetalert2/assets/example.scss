@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300'); // Open Sans font
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700');   // Condensed
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700'); // Condensed
 
 $black: #000;
 $white: #fff;
@@ -210,7 +210,6 @@ button,
     box-shadow: 0 0 0 2px $athens, 0 0 0 4px $chateaugray;
   }
 
-
   &:active {
     background-color: darken($btn-blue, 10%);
   }
@@ -324,6 +323,7 @@ pre {
     margin: 5px auto;
     padding: 35px 10px;
   }
+
   @media all and (max-width: 440px) {
     width: auto;
   }
@@ -373,13 +373,13 @@ pre {
   }
 }
 
-
 .examples {
   list-style-type: none;
   width: 750px;
   margin: 0 auto;
   text-align: left;
   padding-left: 0;
+
   @media all and (max-width: 758px) {
     width: auto;
   }
@@ -431,7 +431,6 @@ pre {
   }
 }
 
-
 ol {
   max-width: 725px;
   margin: 70px auto;
@@ -447,13 +446,13 @@ ol {
   }
 }
 
-
 table {
   width: 725px;
   font-size: 14px;
   margin: 10px auto;
   text-align: left;
   border-collapse: collapse;
+
   @media all and (max-width: 750px) {
     width: auto;
     margin: 10px auto;
@@ -470,7 +469,7 @@ table {
     @media all and (max-width: 750px) {
       &:nth-child(2) {
         display: none;
-     }
+      }
     }
   }
 
@@ -481,8 +480,9 @@ table {
     @media all and (max-width: 750px) {
       &:nth-child(2) {
         display: none;
-     }
+      }
     }
+
     @media all and (max-width: 360px) {
       padding: 10px 4px;
 

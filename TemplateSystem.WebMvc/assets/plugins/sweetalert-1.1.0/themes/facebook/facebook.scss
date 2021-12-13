@@ -1,10 +1,9 @@
 // Facebook Theme for SweetAlert
 // By Tristan Edwards
 
-.sweet-overlay {  
+.sweet-overlay {
   border-radius: 3px;
 }
-
 
 .sweet-alert {
   $header-height: 41px;
@@ -46,8 +45,10 @@
   .sa-button-container {
     border-top: 1px solid #dcdee3;
   }
+
   &[data-has-confirm-button=false][data-has-cancel-button=false] {
     padding-bottom: 10px;
+
     .sa-button-container {
       display: none;
     }
@@ -62,6 +63,7 @@
     font-weight: 500;
     margin: 0;
     margin-top: $padding;
+
     &:focus, &.cancel:focus {
       box-shadow: $fb-focus;
     }
@@ -71,6 +73,7 @@
       background-color: #47639c !important;
       margin-left: 4px;
     }
+
     &.cancel {
       color: #4e5664;
       background-color: #fafbfb;
@@ -78,6 +81,7 @@
       border: 1px solid #c5c6c8;
       box-shadow: 0px 1px 1px rgba(black, 0.04) !important;
       font-weight: 600;
+
       &:hover {
         background-color: #fafbfb;
       }
@@ -98,6 +102,7 @@
     font-size: 15px;
     height: 33px;
     margin: 10px 0;
+
     &:focus {
       box-shadow: $fb-focus;
     }
@@ -112,6 +117,7 @@
     background-color: #fdebe8;
     margin: 0;
     border: none;
+
     &.show {
       margin: 14px;
       margin-top: 0;
@@ -121,6 +127,7 @@
     .icon {
       display: none;
     }
+
     p {
       color: #303b44;
       margin-top: 3px;
@@ -128,19 +135,28 @@
   }
 }
 
-
 // Animations
 
 @mixin keyframes($animation-name) {
   @-webkit-keyframes #{$animation-name} {
     @content;
   }
+
   @keyframes #{$animation-name} {
     @content;
   }
 }
 
 @include keyframes(animateErrorIcon) {
-  0%    { transform: rotateX(100deg), scale(0.5); -webkit-transform: rotateX(100deg), scale(0.5); opacity: 0; }
-  100%  { transform: rotateX(0deg),   scale(0.5); -webkit-transform: rotateX(0deg),   scale(0.5); opacity: 1; }
+  0% {
+    transform: rotateX(100deg), scale(0.5);
+    -webkit-transform: rotateX(100deg), scale(0.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotateX(0deg), scale(0.5);
+    -webkit-transform: rotateX(0deg), scale(0.5);
+    opacity: 1;
+  }
 }

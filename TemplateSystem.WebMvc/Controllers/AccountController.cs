@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using NLog;
+using System;
 using System.Web.Mvc;
 using System.Web.Security;
 using TemplateSystem.Entity.Models;
-using NLog;
 
 namespace TemplateSystem.WebMvc.Controllers
 {
@@ -22,24 +19,21 @@ namespace TemplateSystem.WebMvc.Controllers
             logger.Error("Sample error message");
             logger.Fatal("Sample fatal error message");
 
-
             Login Mod = new Login();
             return View(Mod);
-
         }
 
-       // [HttpPost]
+        // [HttpPost]
         public JsonResult LogInAccess()
-        {                       
+        {
             try
-            {               
+            {
                 //if(string example)
 
                 var ret = Json(new
                 {
                     Result = "OK",
                     url = "Home" + '/' + "Index"
-
                 });
 
                 return ret;
@@ -48,7 +42,6 @@ namespace TemplateSystem.WebMvc.Controllers
                 //{
                 //    return Json(new { Result = "ERROR", Message = LoginResponse.Message.Message, ChagePass = LoginResponse.Message.MustChangePassword });
                 //}
-
             }
             catch (Exception ex)
             {
@@ -56,23 +49,16 @@ namespace TemplateSystem.WebMvc.Controllers
                 return Json(new { Result = "ERROR", Message = ex.Message });
             }
         }
-
 
         public JsonResult DeleteSession()
         {
             try
             {
-               
-
                 var ret = Json(new
                 {
-                   
-
                 });
 
                 return ret;
-               
-
             }
             catch (Exception ex)
             {
@@ -80,8 +66,6 @@ namespace TemplateSystem.WebMvc.Controllers
                 return Json(new { Result = "ERROR", Message = ex.Message });
             }
         }
-
-
 
         public ActionResult LogOut()
         {
@@ -100,7 +84,5 @@ namespace TemplateSystem.WebMvc.Controllers
                 return RedirectToAction("Login", "Account");
             }
         }
-
-
     }
 }

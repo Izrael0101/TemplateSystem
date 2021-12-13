@@ -12,7 +12,7 @@
 /* jshint nomen:false */
 /* global define, require, window, Blob */
 
-;(function (factory) {
+; (function (factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
         // Register as an anonymous AMD module:
@@ -115,7 +115,6 @@
     // The File Upload Resize plugin extends the fileupload widget
     // with image resize functionality:
     $.widget('blueimp.fileupload', $.blueimp.fileupload, {
-
         options: {
             // The regular expression for the types of images to load:
             // matched against the file type:
@@ -149,7 +148,6 @@
         },
 
         processActions: {
-
             // Loads the image given via data.files and data.index
             // as img element, if the browser supports the File API.
             // Accepts the options fileTypes (regular expression)
@@ -162,19 +160,19 @@
                     file = data.files[data.index],
                     dfd = $.Deferred();
                 if (($.type(options.maxFileSize) === 'number' &&
-                            file.size > options.maxFileSize) ||
-                        (options.fileTypes &&
-                            !options.fileTypes.test(file.type)) ||
-                        !loadImage(
-                            file,
-                            function (img) {
-                                if (img.src) {
-                                    data.img = img;
-                                }
-                                dfd.resolveWith(that, [data]);
-                            },
-                            options
-                        )) {
+                    file.size > options.maxFileSize) ||
+                    (options.fileTypes &&
+                        !options.fileTypes.test(file.type)) ||
+                    !loadImage(
+                        file,
+                        function (img) {
+                            if (img.src) {
+                                data.img = img;
+                            }
+                            dfd.resolveWith(that, [data]);
+                        },
+                        options
+                    )) {
                     return data;
                 }
                 return dfd.promise();
@@ -189,14 +187,14 @@
                 if (options.disabled || !(data.canvas || data.img)) {
                     return data;
                 }
-                options = $.extend({canvas: true}, options);
+                options = $.extend({ canvas: true }, options);
                 var that = this,
                     dfd = $.Deferred(),
                     img = (options.canvas && data.canvas) || data.img,
                     resolve = function (newImg) {
                         if (newImg && (newImg.width !== img.width ||
-                                newImg.height !== img.height ||
-                                options.forceResize)) {
+                            newImg.height !== img.height ||
+                            options.forceResize)) {
                             data[newImg.getContext ? 'canvas' : 'img'] = newImg;
                         }
                         data.preview = newImg;
@@ -283,7 +281,7 @@
 
             saveImageMetaData: function (data, options) {
                 if (!(data.imageHead && data.canvas &&
-                        data.canvas.toBlob && !options.disabled)) {
+                    data.canvas.toBlob && !options.disabled)) {
                     return data;
                 }
                 var file = data.files[data.index],
@@ -292,7 +290,7 @@
                         // Resized images always have a head size of 20 bytes,
                         // including the JPEG marker and a minimal JFIF header:
                         this._blobSlice.call(file, 20)
-                    ], {type: file.type});
+                    ], { type: file.type });
                 blob.name = file.name;
                 data.files[data.index] = blob;
                 return data;
@@ -316,9 +314,6 @@
                 }
                 return data;
             }
-
         }
-
     });
-
 }));

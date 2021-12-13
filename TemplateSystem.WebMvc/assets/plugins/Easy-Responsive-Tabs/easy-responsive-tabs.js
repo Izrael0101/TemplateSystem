@@ -8,15 +8,15 @@
                 width: 'auto',
                 fit: true,
                 closed: false,
-                activate: function(){}
+                activate: function () { }
             }
             //Variables
-            var options = $.extend(defaults, options);            
+            var options = $.extend(defaults, options);
             var opt = options, jtype = opt.type, jfit = opt.fit, jwidth = opt.width, vtabs = 'vertical', accord = 'accordion';
 
             //Events
-            $(this).bind('tabactivate', function(e, currentTab) {
-                if(typeof options.activate === 'function') {
+            $(this).bind('tabactivate', function (e, currentTab) {
+                if (typeof options.activate === 'function') {
                     options.activate.call(currentTab, e)
                 }
             });
@@ -68,8 +68,8 @@
                     $tabItem.attr('aria-controls', 'tab_item-' + (count));
                     $tabItem.attr('role', 'tab');
 
-                    //First active tab, keep closed if option = 'closed' or option is 'accordion' and the element is in accordion mode 
-                    if(options.closed !== true && !(options.closed === 'accordion' && !$respTabsList.is(':visible')) && !(options.closed === 'tabs' && $respTabsList.is(':visible'))) {                  
+                    //First active tab, keep closed if option = 'closed' or option is 'accordion' and the element is in accordion mode
+                    if (options.closed !== true && !(options.closed === 'accordion' && !$respTabsList.is(':visible')) && !(options.closed === 'tabs' && $respTabsList.is(':visible'))) {
                         $respTabs.find('.resp-tab-item').first().addClass('resp-tab-active');
                         $respTabs.find('.resp-accordion').first().addClass('resp-tab-active');
                         $respTabs.find('.resp-tab-content').first().addClass('resp-tab-content-active').attr('style', 'display:block');
@@ -89,7 +89,6 @@
                 $respTabs.find("[role=tab]").each(function () {
                     var $currentTab = $(this);
                     $currentTab.click(function () {
-
                         var $tabAria = $currentTab.attr('aria-controls');
 
                         if ($currentTab.hasClass('resp-accordion') && $currentTab.hasClass('resp-tab-active')) {
@@ -112,7 +111,7 @@
                         //Trigger tab activation event
                         $currentTab.trigger('tabactivate', $currentTab);
                     });
-                    //Window resize function                   
+                    //Window resize function
                     $(window).resize(function () {
                         $respTabs.find('.resp-accordion-closed').removeAttr('style');
                     });
